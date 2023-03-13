@@ -8,8 +8,7 @@ module.exports = {
           Authorization: process.env.HOLAPLEX_AUTH_TOKEN
         }
       }
-    },
-    './schema.graphql'
+    }
   ],
   rootPath: './docs',
   baseURL: '/',
