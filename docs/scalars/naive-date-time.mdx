@@ -1,0 +1,36 @@
+---
+id: naive-date-time
+title: NaiveDateTime
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+ISO 8601 combined date and time without timezone.
+
+# Examples
+
+* `2015-07-01T08:59:60.123`,
+
+```graphql
+scalar NaiveDateTime
+```
+
+
+
+
+### Member of
+
+[`AccessToken`](/objects/access-token)  <Badge class="secondary" text="object"/><Bullet />[`CollectionMint`](/objects/collection-mint)  <Badge class="secondary" text="object"/><Bullet />[`Credential`](/objects/credential)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/objects/drop)  <Badge class="secondary" text="object"/><Bullet />[`Invite`](/objects/invite)  <Badge class="secondary" text="object"/><Bullet />[`Member`](/objects/member)  <Badge class="secondary" text="object"/><Bullet />[`Organization`](/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Owner`](/objects/owner)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/objects/project)  <Badge class="secondary" text="object"/><Bullet />[`Treasury`](/objects/treasury)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/objects/wallet)  <Badge class="secondary" text="object"/><Bullet />[`Webhook`](/objects/webhook)  <Badge class="secondary" text="object"/>
+
+
+

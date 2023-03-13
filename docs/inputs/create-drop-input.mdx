@@ -1,0 +1,80 @@
+---
+id: create-drop-input
+title: CreateDropInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input CreateDropInput {
+  project: UUID!
+  price: Int
+  sellerFeeBasisPoints: Int
+  supply: Int
+  startTime: DateTime
+  endTime: DateTime
+  blockchain: Blockchain!
+  creators: [CollectionCreatorInput!]!
+  metadataJson: MetadataJsonInput!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>project</b></code>](#)<Bullet />[`UUID!`](/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>price</b></code>](#)<Bullet />[`Int`](/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>sellerFeeBasisPoints</b></code>](#)<Bullet />[`Int`](/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>supply</b></code>](#)<Bullet />[`Int`](/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>startTime</b></code>](#)<Bullet />[`DateTime`](/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>endTime</b></code>](#)<Bullet />[`DateTime`](/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>blockchain</b></code>](#)<Bullet />[`Blockchain!`](/enums/blockchain) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>creators</b></code>](#)<Bullet />[`[CollectionCreatorInput!]!`](/inputs/collection-creator-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreateDropInput.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJsonInput!`](/inputs/metadata-json-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+
+
+### Member of
+
+[`createDrop`](/mutations/create-drop)  <Badge class="secondary" text="mutation"/>
+
+
+

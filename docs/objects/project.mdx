@@ -1,0 +1,107 @@
+---
+id: project
+title: Project
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Project {
+  id: UUID!
+  customer(
+  id: UUID!
+): Customer
+  customers: [Customer!]
+  drops: [Drop!]
+  drop(
+  id: UUID!
+): Drop
+  name: String!
+  organizationId: UUID!
+  createdAt: NaiveDateTime!
+  deactivatedAt: NaiveDateTime
+  profileImageUrl: String
+  organization: Organization
+  treasury: Treasury
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>id</b></code>](#)<Bullet />[`UUID!`](/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>customer</b></code>](#)<Bullet />[`Customer`](/objects/customer) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Project.customer.<b>id</b></code>](#)<Bullet />[`UUID!`](/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>customers</b></code>](#)<Bullet />[`[Customer!]`](/objects/customer) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>drops</b></code>](#)<Bullet />[`[Drop!]`](/objects/drop) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>drop</b></code>](#)<Bullet />[`Drop`](/objects/drop) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Project.drop.<b>id</b></code>](#)<Bullet />[`UUID!`](/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>name</b></code>](#)<Bullet />[`String!`](/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>organizationId</b></code>](#)<Bullet />[`UUID!`](/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>deactivatedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>profileImageUrl</b></code>](#)<Bullet />[`String`](/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>organization</b></code>](#)<Bullet />[`Organization`](/objects/organization) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>treasury</b></code>](#)<Bullet />[`Treasury`](/objects/treasury) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`project`](/queries/project)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`CreateProjectPayload`](/objects/create-project-payload)  <Badge class="secondary" text="object"/><Bullet />[`Credential`](/objects/credential)  <Badge class="secondary" text="object"/><Bullet />[`Organization`](/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Webhook`](/objects/webhook)  <Badge class="secondary" text="object"/>
+
+
+
