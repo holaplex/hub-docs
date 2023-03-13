@@ -1,0 +1,70 @@
+---
+id: filter-type
+title: FilterType
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum FilterType {
+  PROJECT_CREATED
+  CUSTOMER_CREATED
+  CUSTOMER_TREASURY_CREATED
+  PROJECT_WALLET_CREATED
+  CUSTOMER_WALLET_CREATED
+  DROP_CREATED
+  DROP_MINTED
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>FilterType.<b>PROJECT_CREATED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>FilterType.<b>CUSTOMER_CREATED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>FilterType.<b>CUSTOMER_TREASURY_CREATED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>FilterType.<b>PROJECT_WALLET_CREATED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>FilterType.<b>CUSTOMER_WALLET_CREATED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>FilterType.<b>DROP_CREATED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>FilterType.<b>DROP_MINTED</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`CreateWebhookInput`](/inputs/create-webhook-input)  <Badge class="secondary" text="input"/>
+
+
+

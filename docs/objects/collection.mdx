@@ -1,0 +1,85 @@
+---
+id: collection
+title: Collection
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Collection {
+  id: UUID!
+  blockchain: Blockchain!
+  supply: Int
+  creationStatus: CreationStatus!
+  address: String
+  totalMints: Int!
+  metadataJson: MetadataJson
+  mints: [CollectionMint!]
+  creators: [CollectionCreator!]
+  holders: [Holder!]
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>id</b></code>](#)<Bullet />[`UUID!`](/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>blockchain</b></code>](#)<Bullet />[`Blockchain!`](/enums/blockchain) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>supply</b></code>](#)<Bullet />[`Int`](/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>creationStatus</b></code>](#)<Bullet />[`CreationStatus!`](/enums/creation-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>address</b></code>](#)<Bullet />[`String`](/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>totalMints</b></code>](#)<Bullet />[`Int!`](/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJson`](/objects/metadata-json) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>mints</b></code>](#)<Bullet />[`[CollectionMint!]`](/objects/collection-mint) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>creators</b></code>](#)<Bullet />[`[CollectionCreator!]`](/objects/collection-creator) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Collection.<b>holders</b></code>](#)<Bullet />[`[Holder!]`](/objects/holder) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Member of
+
+[`CollectionMint`](/objects/collection-mint)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/objects/drop)  <Badge class="secondary" text="object"/>
+
+
+
