@@ -1,5 +1,16 @@
+require('dotenv').config();
+
 module.exports = {
-  schema: 'http://localhost:3005',
+  schema: [
+    {
+      [process.env.HOLAPLEX_API_ENDPOINT]: {
+        headers: {
+          Authorization: process.env.HOLAPLEX_AUTH_TOKEN
+        }
+      }
+    },
+    './schema.graphql'
+  ],
   rootPath: './docs',
   baseURL: '/',
   homepage: 'static/index.md',
