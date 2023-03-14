@@ -1,0 +1,45 @@
+---
+id: invite-member
+title: inviteMember
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Res
+
+# Errors
+This function fails if ...
+
+```graphql
+inviteMember(
+  input: InviteMemberInput!
+): Invite!
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>inviteMember.<b>input</b></code>](#)<Bullet />[`InviteMemberInput!`](/api/inputs/invite-member-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`Invite`](/api/objects/invite) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

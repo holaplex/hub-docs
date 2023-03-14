@@ -1,18 +1,7 @@
 {
-  "name": "my-website",
-  "homepage": "https://graphql-markdown.github.io",
+  "name": "docs-website",
   "version": "0.0.0",
   "private": true,
-  "bugs": {
-    "url": "https://github.com/graphql-markdown/graphql-markdown/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/graphql-markdown/template.git"
-  },
-  "author": {
-    "name": "Gregory Heitz"
-  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -21,12 +10,13 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
-    "dev": "docusaurus start",
-    "doc": "docusaurus graphql-to-doc"
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.3.1",
-    "@docusaurus/preset-classic": "^2.3.1",
+    "@docusaurus/core": "2.3.1",
+    "@docusaurus/preset-classic": "2.3.1",
     "@graphql-markdown/docusaurus": "^1.16.6",
     "@graphql-tools/url-loader": "^7.17.14",
     "@mdx-js/react": "^1.6.22",
@@ -36,6 +26,11 @@
     "prism-react-renderer": "^1.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.3.1",
+    "@tsconfig/docusaurus": "^1.0.5",
+    "typescript": "^4.7.4"
   },
   "browserslist": {
     "production": [
@@ -49,6 +44,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "GraphQL-Markdown demonstration",
-  "keywords": []
+  "engines": {
+    "node": ">=16.14"
+  }
 }

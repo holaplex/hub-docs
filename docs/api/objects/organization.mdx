@@ -1,0 +1,125 @@
+---
+id: organization
+title: Organization
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Organization {
+  id: UUID!
+  credential(
+  clientId: String!
+): Credential!
+  credentials(
+  limit: Int
+  offset: Int
+): [Credential!]!
+  name: String!
+  createdAt: NaiveDateTime!
+  deactivatedAt: NaiveDateTime
+  profileImageUrl: String
+  members: [Member!]
+  owner: Owner
+  invites(
+  status: InviteStatus
+): [Invite!]!
+  projects: [Project!]!
+  webhooks: [Webhook!]
+  webhook(
+  id: UUID!
+): Webhook
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>credential</b></code>](#)<Bullet />[`Credential!`](/api/objects/credential) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Organization.credential.<b>clientId</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>credentials</b></code>](#)<Bullet />[`[Credential!]!`](/api/objects/credential) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Organization.credentials.<b>limit</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+##### [<code style={{ fontWeight: 'normal' }}>Organization.credentials.<b>offset</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>name</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>deactivatedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>profileImageUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>members</b></code>](#)<Bullet />[`[Member!]`](/api/objects/member) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>owner</b></code>](#)<Bullet />[`Owner`](/api/objects/owner) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>invites</b></code>](#)<Bullet />[`[Invite!]!`](/api/objects/invite) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Organization.invites.<b>status</b></code>](#)<Bullet />[`InviteStatus`](/api/enums/invite-status) <Badge class="secondary" text="enum"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>projects</b></code>](#)<Bullet />[`[Project!]!`](/api/objects/project) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>webhooks</b></code>](#)<Bullet />[`[Webhook!]`](/api/objects/webhook) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>webhook</b></code>](#)<Bullet />[`Webhook`](/api/objects/webhook) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Organization.webhook.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`organization`](/api/queries/organization)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`CreateOrganizationPayload`](/api/objects/create-organization-payload)  <Badge class="secondary" text="object"/><Bullet />[`Invite`](/api/objects/invite)  <Badge class="secondary" text="object"/><Bullet />[`Member`](/api/objects/member)  <Badge class="secondary" text="object"/><Bullet />[`Owner`](/api/objects/owner)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/>
+
+
+

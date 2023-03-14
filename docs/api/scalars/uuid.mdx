@@ -1,0 +1,39 @@
+---
+id: uuid
+title: UUID
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+A UUID is a unique 128-bit number, stored as 16 octets. UUIDs are parsed as
+Strings within GraphQL. UUIDs are used to assign unique identifiers to
+entities without requiring a central allocating authority.
+
+# References
+
+* [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+* [RFC4122: A Universally Unique IDentifier (UUID) URN Namespace](http://tools.ietf.org/html/rfc4122)
+
+```graphql
+scalar UUID
+```
+
+
+
+
+### Member of
+
+[`AcceptInviteInput`](/api/inputs/accept-invite-input)  <Badge class="secondary" text="input"/><Bullet />[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`CollectionCreator`](/api/objects/collection-creator)  <Badge class="secondary" text="object"/><Bullet />[`CollectionMint`](/api/objects/collection-mint)  <Badge class="secondary" text="object"/><Bullet />[`CreateCredentialInput`](/api/inputs/create-credential-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateCustomerInput`](/api/inputs/create-customer-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateCustomerWalletInput`](/api/inputs/create-customer-wallet-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateDropInput`](/api/inputs/create-drop-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateProjectInput`](/api/inputs/create-project-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateWebhookInput`](/api/inputs/create-webhook-input)  <Badge class="secondary" text="input"/><Bullet />[`Credential`](/api/objects/credential)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`DeleteWebhookInput`](/api/inputs/delete-webhook-input)  <Badge class="secondary" text="input"/><Bullet />[`DeleteWebhookPayload`](/api/objects/delete-webhook-payload)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/api/objects/drop)  <Badge class="secondary" text="object"/><Bullet />[`Holder`](/api/objects/holder)  <Badge class="secondary" text="object"/><Bullet />[`Invite`](/api/objects/invite)  <Badge class="secondary" text="object"/><Bullet />[`invite`](/api/queries/invite)  <Badge class="secondary" text="query"/><Bullet />[`InviteMemberInput`](/api/inputs/invite-member-input)  <Badge class="secondary" text="input"/><Bullet />[`Member`](/api/objects/member)  <Badge class="secondary" text="object"/><Bullet />[`MetadataJson`](/api/objects/metadata-json)  <Badge class="secondary" text="object"/><Bullet />[`MetadataJsonAttribute`](/api/objects/metadata-json-attribute)  <Badge class="secondary" text="object"/><Bullet />[`MintDropInput`](/api/inputs/mint-drop-input)  <Badge class="secondary" text="input"/><Bullet />[`Organization`](/api/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`organization`](/api/queries/organization)  <Badge class="secondary" text="query"/><Bullet />[`Owner`](/api/objects/owner)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/><Bullet />[`project`](/api/queries/project)  <Badge class="secondary" text="query"/><Bullet />[`Treasury`](/api/objects/treasury)  <Badge class="secondary" text="object"/><Bullet />[`User`](/api/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`user`](/api/queries/user)  <Badge class="secondary" text="query"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/><Bullet />[`Webhook`](/api/objects/webhook)  <Badge class="secondary" text="object"/>
+
+
+
