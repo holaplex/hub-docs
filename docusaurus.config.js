@@ -22,7 +22,7 @@ const config = {
   organizationName: "Holaplex", // Usually your GitHub org/user name.
   projectName: "Hub", // Usually your repo name.
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -85,15 +85,15 @@ const config = {
       footer: {
         style: "dark",
         links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
+          //  {
+          //    title: "Docs",
+          //    items: [
+          //      {
+          //        label: "Tutorial",
+          //        to: "/docs/intro",
+          //      },
+          //    ],
+          //  },
           {
             title: "Community",
             items: [
