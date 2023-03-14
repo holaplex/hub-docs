@@ -1,0 +1,50 @@
+---
+id: invite-status
+title: InviteStatus
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum InviteStatus {
+  ACCEPTED
+  REVOKED
+  SENT
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>InviteStatus.<b>ACCEPTED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>InviteStatus.<b>REVOKED</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>InviteStatus.<b>SENT</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`Invite`](/api/objects/invite)  <Badge class="secondary" text="object"/>
+
+
+

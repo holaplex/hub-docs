@@ -1,0 +1,32 @@
+---
+id: string
+title: String
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.
+
+```graphql
+scalar String
+```
+
+
+
+
+### Member of
+
+[`AccessToken`](/api/objects/access-token)  <Badge class="secondary" text="object"/><Bullet />[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`CollectionCreator`](/api/objects/collection-creator)  <Badge class="secondary" text="object"/><Bullet />[`CollectionCreatorInput`](/api/inputs/collection-creator-input)  <Badge class="secondary" text="input"/><Bullet />[`CollectionMint`](/api/objects/collection-mint)  <Badge class="secondary" text="object"/><Bullet />[`CreateCredentialInput`](/api/inputs/create-credential-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateOrganizationInput`](/api/inputs/create-organization-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateProjectInput`](/api/inputs/create-project-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateWebhookInput`](/api/inputs/create-webhook-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateWebhookPayload`](/api/objects/create-webhook-payload)  <Badge class="secondary" text="object"/><Bullet />[`Credential`](/api/objects/credential)  <Badge class="secondary" text="object"/><Bullet />[`defer`](/api/directives/defer)  <Badge class="secondary" text="directive"/><Bullet />[`deprecated`](/api/directives/deprecated)  <Badge class="secondary" text="directive"/><Bullet />[`EventType`](/api/objects/event-type)  <Badge class="secondary" text="object"/><Bullet />[`Holder`](/api/objects/holder)  <Badge class="secondary" text="object"/><Bullet />[`Invite`](/api/objects/invite)  <Badge class="secondary" text="object"/><Bullet />[`InviteMemberInput`](/api/inputs/invite-member-input)  <Badge class="secondary" text="input"/><Bullet />[`MetadataJson`](/api/objects/metadata-json)  <Badge class="secondary" text="object"/><Bullet />[`MetadataJsonAttribute`](/api/objects/metadata-json-attribute)  <Badge class="secondary" text="object"/><Bullet />[`MetadataJsonAttributeInput`](/api/inputs/metadata-json-attribute-input)  <Badge class="secondary" text="input"/><Bullet />[`MetadataJsonCollectionInput`](/api/inputs/metadata-json-collection-input)  <Badge class="secondary" text="input"/><Bullet />[`MetadataJsonFileInput`](/api/inputs/metadata-json-file-input)  <Badge class="secondary" text="input"/><Bullet />[`MetadataJsonInput`](/api/inputs/metadata-json-input)  <Badge class="secondary" text="input"/><Bullet />[`MetadataJsonPropertyInput`](/api/inputs/metadata-json-property-input)  <Badge class="secondary" text="input"/><Bullet />[`MintDropInput`](/api/inputs/mint-drop-input)  <Badge class="secondary" text="input"/><Bullet />[`Organization`](/api/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/><Bullet />[`specifiedBy`](/api/directives/specified-by)  <Badge class="secondary" text="directive"/><Bullet />[`Treasury`](/api/objects/treasury)  <Badge class="secondary" text="object"/><Bullet />[`User`](/api/objects/user)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/><Bullet />[`Webhook`](/api/objects/webhook)  <Badge class="secondary" text="object"/>
+
+
+

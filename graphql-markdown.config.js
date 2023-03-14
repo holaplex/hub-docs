@@ -10,9 +10,9 @@ module.exports = {
       }
     }
   ],
-  rootPath: './api',
-  baseURL: '/',
-  // homepage: 'static/index.md',
+  routeBasePath: 'api',
+  rootPath: './docs',
+  baseURL: '/api',
   loaders: {
     UrlLoader: '@graphql-tools/url-loader'
   },

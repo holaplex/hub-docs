@@ -12,7 +12,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.holaplex.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -70,15 +70,13 @@ const config = {
           //   label: 'Docs'
           // },
           {
-            // type: 'docSidebar',
-            // sidebarId: 'api',
             to: '/api',
             label: 'API',
             position: 'left'
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/holaplex/hub',
             label: 'GitHub',
             position: 'right'
           }
@@ -99,35 +97,35 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-              },
+              // {
+              //   label: 'Stack Overflow',
+              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus'
+              // },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus'
+                href: 'https://discordapp.com/invite/holaplex'
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus'
+                href: 'https://twitter.com/holaplex'
               }
             ]
           },
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog'
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog'
+              // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus'
+                href: 'https://github.com/holaplex/hub'
               }
             ]
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+        copyright: `Copyright © ${new Date().getFullYear()} Holaplex.`
       },
       prism: {
         theme: lightCodeTheme,
