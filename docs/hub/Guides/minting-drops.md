@@ -8,14 +8,14 @@ Minting Drops
 
 This guide will walk you through the process of minting a drop on the Holaplex Hub platform using the provided GraphQL mutation -
 
-```
+```graphql
 mutation MintNft($input: MintDropInput!) {
-mintEdition(input: $input) {
-collectionMint {
-address
-owner
-}
-}
+    mintEdition(input: $input) {
+        collectionMint {
+            address
+            owner
+            }
+    }
 }
 
 ```
@@ -35,7 +35,7 @@ To mint a drop, you need to send the `mintEdition` mutation with the required 
 
 ### Mutation
 
-```
+```graphql
 mutation MintNft($input: MintDropInput!) {
   mintEdition(input: $input) {
     collectionMint {
@@ -53,7 +53,7 @@ mutation MintNft($input: MintDropInput!) {
 
     Example:
 
-    ```
+    ```json
     {
       "recipient": "wallet-address",
       "metadataURI": "<https://example.com/metadata.json>",
@@ -64,7 +64,7 @@ mutation MintNft($input: MintDropInput!) {
 
 ### Example Request
 
-```
+```graphql
 mutation {
   mintEdition(input: { recipient: "wallet-address", metadataURI: "<https://example.com/metadata.json>", maxSupply: 100 }) {
     collectionMint {
@@ -78,7 +78,7 @@ mutation {
 
 ### Example Response
 
-```
+```json
 {
   "data": {
     "mintEdition": {

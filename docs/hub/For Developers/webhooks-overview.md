@@ -47,7 +47,7 @@ Handling Webhooks
 
 To handle webhook events, you need to create an API route that listens for incoming HTTP POST requests. In this example, the route is implemented using Next.js API routes:
 
-```
+```ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import holaplex from "@/modules/holaplex";
 import { Webhook, WebhookRequiredHeaders } from "svix";
@@ -77,7 +77,7 @@ Verification
 
 To ensure the authenticity of webhook requests, you should verify the signature included in the HTTP headers. In this example, the `svix` library is used to perform the verification:
 
-```
+```ts
 const secret = process.env.HOLAPLEX_WEBHOOK_SECRET as string;
 
 // ...

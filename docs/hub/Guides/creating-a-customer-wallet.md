@@ -9,21 +9,21 @@ Creating a wallet
 
 Creating a wallet on Holaplex Hub involves two main steps: creating a customer and creating a wallet for that customer. The GraphQL mutations required for these steps are shown in the code snippet below →
 
-```
+```graphql
 mutation CreateCustomer($input: CreateCustomerInput!) {
-createCustomer(input: $input) {
-customer {
-id
-}
-}
+    createCustomer(input: $input) {
+        customer {
+                    id
+                }
+    }
 }
 
 mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {
-createCustomerWallet(input: $input) {
-wallet {
-address
-}
-}
+        createCustomerWallet(input: $input) {
+            wallet {
+                address
+            }
+        }
 }
 
 ```
@@ -44,7 +44,7 @@ The first step is creating a customer on the Holaplex Hub platform. To do this, 
 
 ### Mutation
 
-```
+```graphql
 mutation CreateCustomer($input: CreateCustomerInput!) {
   createCustomer(input: $input) {
     customer {
@@ -61,7 +61,7 @@ mutation CreateCustomer($input: CreateCustomerInput!) {
 
     Example:
 
-    ```
+    ```json
     {
       "customer": "{ID of customer}"
     }
@@ -70,7 +70,7 @@ mutation CreateCustomer($input: CreateCustomerInput!) {
 
 ### Example Request
 
-```
+```graphql
 mutation {
   createCustomer(input: { project: "{}" }) {
     customer {
@@ -83,7 +83,7 @@ mutation {
 
 ### Example Response
 
-```
+```json
 {
   "data": {
     "createCustomer": {
@@ -103,7 +103,7 @@ After creating a customer, the next step is to create a wallet for that customer
 
 ### Mutation
 
-```
+```graphql
 mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {
   createCustomerWallet(input: $input) {
     wallet {
@@ -120,7 +120,7 @@ mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {
 
     Example:
 
-    ```
+    ```json
     {
       "customerId": "customer-id"
     }
@@ -129,7 +129,7 @@ mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {
 
 ### Example Request
 
-```
+```graphql
 mutation {
   createCustomerWallet(input: { customerId: "customer-id", assetId: "SOL | ETH" }) {
     wallet {
@@ -143,7 +143,7 @@ mutation {
 
 ### Example Response
 
-```
+```json
 {
   "data": {
     "createCustomerWallet": {
