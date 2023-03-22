@@ -49,9 +49,8 @@ Example:
 
 ```json
 {
-  "recipient": "wallet-address",
-  "metadataURI": "<https://example.com/metadata.json>",
-  "maxSupply": 100
+  "drop": "drop-id",
+  "recipient": "wallet-address"
 }
 ```
 
@@ -61,9 +60,10 @@ Example:
 mutation {
   mintEdition(
     input: {
-      recipient: "wallet-address"
-      metadataURI: "<https://example.com/metadata.json>"
-      maxSupply: 100
+        {   
+            drop: "drop-id", 
+            recipient: "wallet-address" 
+        }
     }
   ) {
     collectionMint {
@@ -92,8 +92,8 @@ mutation {
 ## Input Parameters Explained
 
 - `recipient`: The wallet address where the minted drop should be sent. This should be the address of the wallet created on the Holaplex Hub.
-- `metadataURI`: A publicly accessible URL pointing to a JSON file containing the metadata for the drop. This metadata should be compliant with the [NFT Metadata Standard](https://docs.metaplex.com/programs/token-metadata/overview).
-- `maxSupply`: The maximum number of NFTs that can be minted in this drop. This is an optional field; if not provided, the default value will be used.
+- `drop`: The UUID of the drop that you want to mint.
+
 
 After successfully minting the drop, you will receive a response containing the collection address and the owner wallet address. The collection address can be used to manage and query the drop on the Holaplex Hub platform.
 
