@@ -52,13 +52,15 @@ mutation CreateCustomer($input: CreateCustomerInput!) {
 
 ### Input Parameters
 
-- `$input`: A `CreateCustomerInput` object containing the customer details.
+- `$input`: A `CreateCustomerInput` object containing the project `UUID` where you want the customer to be assigned to.
 
-  Example:
+Example:
 
 ```json
 {
-  "customer": "{ID of customer}"
+  "input": {
+    "project": "<project-id>"
+  }
 }
 ```
 
@@ -66,7 +68,7 @@ mutation CreateCustomer($input: CreateCustomerInput!) {
 
 ```graphql
 mutation {
-  createCustomer(input: { project: "{}" }) {
+  createCustomer(input: { project: "<project-id>" }) {
     customer {
       id
     }
@@ -81,7 +83,7 @@ mutation {
   "data": {
     "createCustomer": {
       "customer": {
-        "id": "customer-id"
+        "id": "15433469-a6e2-431b-9eee-be40056e2e0b"
       }
     }
   }
@@ -106,13 +108,18 @@ mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {
 
 ### Input Parameters
 
-- `$input`: A `CreateCustomerWalletInput` object containing the customer ID.
+- `$input`: A `CreateCustomerWalletInput` object containing the customer ID from previous step response, and the desired `assetType` for the wallet.
 
-  Example:
+> Check out the list of supported asset types on the [enums documentation](../../api/enums/asset-type.mdx)
+
+Example:
 
 ```json
 {
-  "customerId": "customer-id"
+  "input": {
+    "customer": "<customer-id>",
+    "assetType": "SOL_TEST"
+  }
 }
 ```
 
@@ -121,7 +128,7 @@ mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {
 ```graphql
 mutation {
   createCustomerWallet(
-    input: { customerId: "customer-id", assetId: "SOL | ETH" }
+    input: { customer: "customer-id", assetType: SOL_TEST }
   ) {
     wallet {
       assetId
@@ -146,4 +153,5 @@ mutation {
 }
 ```
 
-After completing these two steps, you will have successfully created a wallet for the customer on Holaplex Hub. The wallet address can be used for minting NFTs, trading, and other wallet-related operations.
+After completing these two steps, you will have successfully created a wallet for the customer on Holaplex Hub.
+The wallet address can be used for minting NFTs, trading, and other wallet-related operations.
