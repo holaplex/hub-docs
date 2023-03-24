@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A blockchain wallet is a digital wallet that allows users to securely store, manage, and transfer their cryptocurrencies or other digital assets on a blockchain network.
 
 ```graphql
 type Wallet {
@@ -35,11 +35,11 @@ type Wallet {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The wallet address.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>mints</b></code>](#)<Bullet />[`[CollectionMint!]`](/api/objects/collection-mint) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> The NFTs that were minted from Holaplex and are owned by the wallet's address.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>treasuryId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
@@ -47,7 +47,7 @@ type Wallet {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>assetId</b></code>](#)<Bullet />[`AssetType!`](/api/enums/asset-type) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
-> 
+> The wallet's associated blockchain.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>legacyAddress</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>

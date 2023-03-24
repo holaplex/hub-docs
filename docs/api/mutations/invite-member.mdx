@@ -15,10 +15,9 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Res
-
-# Errors
-This function fails if ...
+To invite a person to the organization, provide their email address.
+# Error
+This mutation will produce an error if it is unable to connect to the database or if there is no associated user set in the X-USER-ID header.
 
 ```graphql
 inviteMember(
@@ -36,7 +35,7 @@ inviteMember(
 ### Type
 
 #### [`Invite`](/api/objects/invite) <Badge class="secondary" text="object"/>
-> 
+> An invitation sent to join a Holaplex organization.
 > 
 
 

@@ -15,10 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Res
-
-# Errors
-This function fails if ...
+This mutation creates a customer record and a corresponding treasury that holds custodial wallets on behalf of a user. The treasury serves as a way to group the customer's wallets together. This makes it easier to manage wallets and associated assets for the user within a specific project. The customer and treasury are associated with the specified project ID. The response includes the newly created customer record. If there is an error connecting to the database or unable to emit a customer created event, the mutation will fail and an error will be returned.
 
 ```graphql
 createCustomer(
@@ -36,7 +33,7 @@ createCustomer(
 ### Type
 
 #### [`CreateCustomerPayload`](/api/objects/create-customer-payload) <Badge class="secondary" text="object"/>
-> 
+> This response represents the payload returned after successfully creating a new `customer` record. It contains a single field customer which is a `Customer` object representing the newly created customer record.
 > 
 
 

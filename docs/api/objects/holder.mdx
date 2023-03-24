@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+The holder of a collection.
 
 ```graphql
 type Holder {
@@ -30,19 +30,19 @@ type Holder {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Holder.<b>collectionId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The collection ID that the holder owns.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Holder.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The wallet address of the holder.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Holder.<b>owns</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The number of NFTs that the holder owns in the collection.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Holder.<b>mints</b></code>](#)<Bullet />[`[String!]!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The specific mints from the collection that the holder owns.
 > 
 
 

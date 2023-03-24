@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+The status of a member invitation.
 
 ```graphql
 enum InviteStatus {
@@ -29,15 +29,15 @@ enum InviteStatus {
 ### Values
 
 #### [<code style={{ fontWeight: 'normal' }}>InviteStatus.<b>ACCEPTED</b></code>](#) 
-> 
+> The member invitation has been accepted by the invited user.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>InviteStatus.<b>REVOKED</b></code>](#) 
-> 
+> The member invitation has been revoked by an existing member of the organization and is no longer valid.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>InviteStatus.<b>SENT</b></code>](#) 
-> 
+> The member invitation has been sent to the invited user.
 > 
 
 

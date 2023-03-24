@@ -36,43 +36,43 @@ type Drop {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier for the drop.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>projectId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The identifier of the project to which the drop is associated.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>creationStatus</b></code>](#)<Bullet />[`CreationStatus!`](/api/enums/creation-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
-> 
+> The creation status of the drop.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>startTime</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
-> 
+> The date and time in UTC when the drop is eligible for minting. A value of `null` means the drop can be minted immediately.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>endTime</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
-> 
+> The end date and time in UTC for the drop. A value of `null` means the drop does not end until it is fully minted.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>price</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The cost to mint the drop in US dollars. When purchasing with crypto the user will be charged at the current conversion rate for the blockchain's native coin at the time of minting.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>createdById</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The user id of the person who created the drop.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The date and time in UTC when the drop was created.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>collection</b></code>](#)<Bullet />[`Collection!`](/api/objects/collection) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The collection for which the drop is managing mints.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>status</b></code>](#)<Bullet />[`DropStatus!`](/api/enums/drop-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
-> 
+> The current status of the drop.
 > 
 
 

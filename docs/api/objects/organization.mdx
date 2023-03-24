@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A Holaplex organization is the top-level account within the Holaplex ecosystem. Each organization has a single owner who can invite members to join. Organizations use projects to organize NFT campaigns or initiatives.
 
 ```graphql
 type Organization {
@@ -48,17 +48,36 @@ type Organization {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier assigned to the Holaplex organization, which is used to distinguish it from other organizations within the Holaplex ecosystem.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>credential</b></code>](#)<Bullet />[`Credential!`](/api/objects/credential) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> Get a single API credential by client ID.
+
+# Arguments
+
+* `ctx` - The GraphQL context object containing the database connection pool and other data.
+* `client_id` - The client ID of the API credential to retrieve.
+
+# Returns
+
+The API credential with the specified client ID.
 > ##### [<code style={{ fontWeight: 'normal' }}>Organization.credential.<b>clientId</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>credentials</b></code>](#)<Bullet />[`[Credential!]!`](/api/objects/credential) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> Get a list of API credentials associated with this organization.
+
+# Arguments
+
+* `ctx` - The GraphQL context object containing the database connection pool and other data.
+* `limit` - Optional limit on the number of credentials to retrieve.
+* `offset` - Optional offset for the credentials to retrieve.
+
+# Returns
+
+A list of API credentials associated with this organization.
 > ##### [<code style={{ fontWeight: 'normal' }}>Organization.credentials.<b>limit</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
 > 
 > 
@@ -68,45 +87,70 @@ type Organization {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>name</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The name given to the Holaplex organization, which is used to identify it within the Holaplex ecosystem and to its members and users.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The datetime, in UTC, when the Holaplex organization was created by its owner.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>deactivatedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
-> 
+> The datetime, in UTC, when the Holaplex organization was deactivated by its owner.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>profileImageUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The optional profile image associated with the Holaplex organization, which can be used to visually represent the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>members</b></code>](#)<Bullet />[`[Member!]`](/api/objects/member) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> The members who have been granted access to the Holaplex organization, represented by individuals who have been invited and accepted the invitation to join the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>owner</b></code>](#)<Bullet />[`Owner`](/api/objects/owner) <Badge class="secondary" text="object"/>
-> 
+> The owner of the Holaplex organization, who has created the organization and has full control over its settings and members.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>invites</b></code>](#)<Bullet />[`[Invite!]!`](/api/objects/invite) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The invitations to join the Holaplex organization that have been sent to email addresses and are either awaiting or have been accepted by the recipients.
 > ##### [<code style={{ fontWeight: 'normal' }}>Organization.invites.<b>status</b></code>](#)<Bullet />[`InviteStatus`](/api/enums/invite-status) <Badge class="secondary" text="enum"/>
 > 
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>projects</b></code>](#)<Bullet />[`[Project!]!`](/api/objects/project) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
-> 
+> The projects that have been created and are currently associated with the Holaplex organization, which are used to organize NFT campaigns or initiatives within the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>webhooks</b></code>](#)<Bullet />[`[Webhook!]`](/api/objects/webhook) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> Retrieves a list of all webhooks associated with the organization.
+
+# Arguments
+
+* `ctx` - The context object representing the current request.
+
+# Returns
+
+A vector of all Webhook objects associated with the Organization, or None if there are none.
+
+# Errors
+
+This function will return an error if the data context cannot be retrieved.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>webhook</b></code>](#)<Bullet />[`Webhook`](/api/objects/webhook) <Badge class="secondary" text="object"/>
-> 
+> Retrieves a specific webhook associated with the organization, based on its ID.
+
+# Arguments
+
+* `ctx` - The context object representing the current request.
+* `id` - The UUID of the Webhook to retrieve.
+
+# Returns
+
+The specified Webhook object, or None if it does not exist.
+
+# Errors
+
+This function will return an error if the data context cannot be retrieved.
 > ##### [<code style={{ fontWeight: 'normal' }}>Organization.webhook.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
@@ -119,7 +163,7 @@ type Organization {
 
 ### Member of
 
-[`CreateOrganizationPayload`](/api/objects/create-organization-payload)  <Badge class="secondary" text="object"/><Bullet />[`Invite`](/api/objects/invite)  <Badge class="secondary" text="object"/><Bullet />[`Member`](/api/objects/member)  <Badge class="secondary" text="object"/><Bullet />[`Owner`](/api/objects/owner)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/>
+[`CreateOrganizationPayload`](/api/objects/create-organization-payload)  <Badge class="secondary" text="object"/><Bullet />[`EditOrganizationPayload`](/api/objects/edit-organization-payload)  <Badge class="secondary" text="object"/><Bullet />[`Invite`](/api/objects/invite)  <Badge class="secondary" text="object"/><Bullet />[`Member`](/api/objects/member)  <Badge class="secondary" text="object"/><Bullet />[`Owner`](/api/objects/owner)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/>
 
 
 

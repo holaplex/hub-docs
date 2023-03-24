@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+An NFT collection that has either a fixed supply or unlimited mints. NFT collections are deployed to a desired blockchain.
 
 ```graphql
 type Collection {
@@ -36,43 +36,45 @@ type Collection {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier for the collection.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>blockchain</b></code>](#)<Bullet />[`Blockchain!`](/api/enums/blockchain) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
-> 
+> The blockchain of the collection.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>supply</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
-> 
+> The total supply of the collection. Setting to `null` implies unlimited minting.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>creationStatus</b></code>](#)<Bullet />[`CreationStatus!`](/api/enums/creation-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
-> 
+> The creation status of the collection. When the collection is in a `CREATED` status you can mint NFTs from the collection.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>address</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The blockchain address of the collection used to view it in blockchain explorers.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>totalMints</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The current number of NFTs minted from the collection.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJson`](/api/objects/metadata-json) <Badge class="secondary" text="object"/>
-> 
+> The metadata json associated to the collection.
+## References
+[Metaplex v1.1.0 Standard](https://docs.metaplex.com/programs/token-metadata/token-standard)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>mints</b></code>](#)<Bullet />[`[CollectionMint!]`](/api/objects/collection-mint) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> The list of minted NFTs from the collection including the NFTs address and current owner's wallet address.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>creators</b></code>](#)<Bullet />[`[CollectionCreator!]`](/api/objects/collection-creator) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> The list of attributed creators for the collection.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>holders</b></code>](#)<Bullet />[`[Holder!]`](/api/objects/holder) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> The list of current holders of NFTs from the collection.
 > 
 
 
