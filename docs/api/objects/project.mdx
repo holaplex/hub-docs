@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A Holaplex project that belongs to an organization. Projects are used to group unique NFT campaigns or initiatives, and are used to assign objects that end customers will interact with, such as drops and wallets.
 
 ```graphql
 type Project {
@@ -42,47 +42,47 @@ type Project {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier assigned to the Holaplex project.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>customer</b></code>](#)<Bullet />[`Customer`](/api/objects/customer) <Badge class="secondary" text="object"/>
-> 
+> Retrieve a customer record associated with the project, using its ID.
 > ##### [<code style={{ fontWeight: 'normal' }}>Project.customer.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>customers</b></code>](#)<Bullet />[`[Customer!]`](/api/objects/customer) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> Retrieve all customer records associated with a given project.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>drops</b></code>](#)<Bullet />[`[Drop!]`](/api/objects/drop) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> The drops associated with the project.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>drop</b></code>](#)<Bullet />[`Drop`](/api/objects/drop) <Badge class="secondary" text="object"/>
-> 
+> Look up a drop associated with the project by its ID.
 > ##### [<code style={{ fontWeight: 'normal' }}>Project.drop.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>name</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The friendly name assigned to the Holaplex project to differentiate it from other projects belonging to the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>organizationId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the Holaplex organization to which the project belongs.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The datetime, in UTC, when the project was created.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>deactivatedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
-> 
+> The date and time in Coordinated Universal Time (UTC) when the Holaplex project was created. Once a project is deactivated, objects that were assigned to the project can no longer be interacted with.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>profileImageUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The optional profile image associated with the project, which can be used to visually represent the project.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>organization</b></code>](#)<Bullet />[`Organization`](/api/objects/organization) <Badge class="secondary" text="object"/>
@@ -90,7 +90,7 @@ type Project {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>treasury</b></code>](#)<Bullet />[`Treasury`](/api/objects/treasury) <Badge class="secondary" text="object"/>
-> 
+> The treasury assigned to the project, which contains the project's wallets.
 > 
 
 
@@ -101,7 +101,7 @@ type Project {
 
 ### Member of
 
-[`CreateProjectPayload`](/api/objects/create-project-payload)  <Badge class="secondary" text="object"/><Bullet />[`Credential`](/api/objects/credential)  <Badge class="secondary" text="object"/><Bullet />[`Organization`](/api/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Webhook`](/api/objects/webhook)  <Badge class="secondary" text="object"/>
+[`CreateProjectPayload`](/api/objects/create-project-payload)  <Badge class="secondary" text="object"/><Bullet />[`EditProjectPayload`](/api/objects/edit-project-payload)  <Badge class="secondary" text="object"/><Bullet />[`Organization`](/api/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Webhook`](/api/objects/webhook)  <Badge class="secondary" text="object"/>
 
 
 

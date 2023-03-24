@@ -1,6 +1,6 @@
 ---
-id: event-types
-title: eventTypes
+id: edit-webhook-payload
+title: EditWebhookPayload
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,28 +15,26 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Returns a list of event types that an external service can subscribe to.
-
-# Returns
-
-A vector of EventType objects representing the different event types that can be subscribed to.
-
-# Errors
-
-This function returns an error if there was a problem with retrieving the event types.
+No description
 
 ```graphql
-eventTypes: [EventType!]!
+type EditWebhookPayload {
+  webhook: Webhook!
+}
 ```
 
 
-### Type
+### Fields
 
-#### [`EventType`](/api/objects/event-type) <Badge class="secondary" text="object"/>
-> An event to which an external service can subscribe.
+#### [<code style={{ fontWeight: 'normal' }}>EditWebhookPayload.<b>webhook</b></code>](#)<Bullet />[`Webhook!`](/api/objects/webhook) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> 
 > 
 
 
+
+### Returned by
+
+[`editWebhook`](/api/mutations/edit-webhook)  <Badge class="secondary" text="mutation"/>
 
 
 

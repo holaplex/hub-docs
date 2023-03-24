@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+Input required for inviting a member to the organization.
 
 ```graphql
 input InviteMemberInput {
@@ -28,11 +28,11 @@ input InviteMemberInput {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>InviteMemberInput.<b>organization</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>InviteMemberInput.<b>email</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The email address of the invited user.
 > 
 
 

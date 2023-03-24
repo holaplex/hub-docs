@@ -15,10 +15,9 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Res
-
-# Errors
-This function fails if ...
+This mutation creates a new NFT drop and its associated collection. The drop returns immediately with a creation status of CREATING. You can [set up a webhook](https://docs.holaplex.dev/hub/For%20Developers/webhooks-overview) to receive a notification when the drop is ready to be minted.
+Error
+If the drop cannot be saved to the database or fails to be emitted for submission to the desired blockchain, the mutation will result in an error.
 
 ```graphql
 createDrop(

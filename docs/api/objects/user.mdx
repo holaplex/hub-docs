@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A unique user identity across the entire Holaplex ecosystem. A user can be associated with multiple organizations, but they are not required to have separate login credentials.
 
 ```graphql
 type User {
@@ -33,27 +33,27 @@ type User {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier for the user identity.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>firstName</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The first name of the user identity.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>lastName</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The last name of the user identity.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>email</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The email address associated with the user identity.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>createdAt</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The timestamp in UTC when the user identity was created.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>updatedAt</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The timestamp in UTC when the user identity was last updated.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>affiliations</b></code>](#)<Bullet />[`[Affiliation!]!`](/api/unions/affiliation) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="union"/>

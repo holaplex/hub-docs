@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+An attributed creator for a colleciton.
 
 ```graphql
 input CollectionCreatorInput {
@@ -29,15 +29,17 @@ input CollectionCreatorInput {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionCreatorInput.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The wallet address of the creator.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionCreatorInput.<b>verified</b></code>](#)<Bullet />[`Boolean`](/api/scalars/boolean) <Badge class="secondary" text="scalar"/>
-> 
+> This field indicates whether the collection's creator has been verified. This feature is only supported on the Solana blockchain.
+## References
+[Metaplex Token Metadata - Verify creator instruction](https://docs.metaplex.com/programs/token-metadata/instructions#verify-a-creator)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionCreatorInput.<b>share</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The share of royalties payout the creator should receive.
 > 
 
 

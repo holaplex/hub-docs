@@ -15,10 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Res
-
-# Errors
-This function fails if ...
+Query an organization by its ID, this query returns `null` if the organization does not exist.
 
 ```graphql
 organization(
@@ -36,7 +33,7 @@ organization(
 ### Type
 
 #### [`Organization`](/api/objects/organization) <Badge class="secondary" text="object"/>
-> 
+> A Holaplex organization is the top-level account within the Holaplex ecosystem. Each organization has a single owner who can invite members to join. Organizations use projects to organize NFT campaigns or initiatives.
 > 
 
 

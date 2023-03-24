@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+The input used for creating a project.
 
 ```graphql
 input CreateProjectInput {
@@ -29,15 +29,15 @@ input CreateProjectInput {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>CreateProjectInput.<b>organization</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the organization the project belongs to.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CreateProjectInput.<b>name</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The friendly name to denote the project from others belonging to the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CreateProjectInput.<b>profileImageUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> The URL of the project's profile image.
 > 
 
 

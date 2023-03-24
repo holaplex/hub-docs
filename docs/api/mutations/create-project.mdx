@@ -15,10 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Res
+This mutation creates a new project under the specified organization.
 
 # Errors
-This function fails if ...
+This mutation produces an error if it is unable to connect to the database, emit the project creation event, or if the user is not set in the X-USER-ID header.
 
 ```graphql
 createProject(
@@ -36,7 +36,7 @@ createProject(
 ### Type
 
 #### [`CreateProjectPayload`](/api/objects/create-project-payload) <Badge class="secondary" text="object"/>
-> 
+> * The payload returned by the `createProject` mutation.
 > 
 
 

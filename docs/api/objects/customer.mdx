@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A customer record represents a user in your service and is used to group custodial wallets within a specific project. This allows for easy management of wallets and associated assets for a particular customer within your service.
 
 ```graphql
 type Customer {
@@ -31,23 +31,23 @@ type Customer {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier for the customer record.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>projectId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the project to which the customer record belongs.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The datetime when the customer record was created.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>updatedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
-> 
+> An optional datetime indicating the last time the customer record was updated. If the customer record has not been updated, this field will be `null`.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>treasury</b></code>](#)<Bullet />[`Treasury`](/api/objects/treasury) <Badge class="secondary" text="object"/>
-> 
+> The treasury assigned to the customer, which contains the customer's wallets.
 > 
 
 

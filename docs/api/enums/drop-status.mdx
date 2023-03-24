@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+The different phases of a drop.
 
 ```graphql
 enum DropStatus {
@@ -31,23 +31,23 @@ enum DropStatus {
 ### Values
 
 #### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>MINTING</b></code>](#) 
-> 
+> Actively minting.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>MINTED</b></code>](#) 
-> 
+> The minting process for the collection is complete.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>SCHEDULED</b></code>](#) 
-> 
+> The drop is scheduled for minting.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>EXPIRED</b></code>](#) 
-> 
+> The drop has expired and its end time has passed.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>CREATING</b></code>](#) 
-> 
+> The drop is still being created and is not ready to mint.
 > 
 
 

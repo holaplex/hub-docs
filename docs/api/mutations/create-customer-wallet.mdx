@@ -15,10 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Res
+Create a wallet for a customer and assign it to the customer's treasury account.
 
 # Errors
-This function fails if ...
+The mutation will result in an error if it is unable to interact with the database or communicate with Fireblocks.
 
 ```graphql
 createCustomerWallet(
@@ -36,7 +36,7 @@ createCustomerWallet(
 ### Type
 
 #### [`CreateCustomerWalletPayload`](/api/objects/create-customer-wallet-payload) <Badge class="secondary" text="object"/>
-> 
+> Response after wallet creation.
 > 
 
 

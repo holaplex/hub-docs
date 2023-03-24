@@ -15,7 +15,9 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+The collection's associated metadata JSON.
+## References
+[Metaplex v1.1.0 Standard](https://docs.metaplex.com/programs/token-metadata/token-standard)
 
 ```graphql
 type MetadataJson {
@@ -44,31 +46,31 @@ type MetadataJson {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>name</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The assigned name of the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>uri</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The URI for the complete metadata JSON.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>symbol</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The symbol of the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>description</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The description of the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>image</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The image URI for the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>animationUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> An optional animated version of the NFT art.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>externalUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
-> 
+> An optional URL where viewers can find more information on the NFT, such as the collection's homepage or Twitter page.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>MetadataJson.<b>attributes</b></code>](#)<Bullet />[`[MetadataJsonAttribute!]`](/api/objects/metadata-json-attribute) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>

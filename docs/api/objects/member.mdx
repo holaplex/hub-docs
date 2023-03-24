@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A member of a Holaplex organization, representing an individual who has been granted access to the organization.
 
 ```graphql
 type Member {
@@ -35,39 +35,39 @@ type Member {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>userId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the user who has been granted access to the Holaplex organization as a member.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>user</b></code>](#)<Bullet />[`User`](/api/objects/user) <Badge class="secondary" text="object"/>
-> 
+> The user identity who is a member of the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier of the member.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>organizationId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the Holaplex organization to which the user has been granted access.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The datetime, in UTC, when the member joined the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>revokedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
-> 
+> The datetime, in UTC, when the member was revoked from the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>inviteId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the invitation that the member accepted to join the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>organization</b></code>](#)<Bullet />[`Organization`](/api/objects/organization) <Badge class="secondary" text="object"/>
-> 
+> The Holaplex organization to which the member belongs, representing an individual who has been granted access to the organization.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>invite</b></code>](#)<Bullet />[`Invite`](/api/objects/invite) <Badge class="secondary" text="object"/>
-> 
+> The invitation to join the Holaplex organization that the member accepted in order to gain access to the organization.
 > 
 
 

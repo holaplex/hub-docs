@@ -3,7 +3,7 @@
 const graphqlMarkdownConfig = require("./graphql-markdown.config");
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const darkCodeTheme = require("prism-react-renderer/themes/vsDark");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -54,6 +54,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       // Replace with your project's social card
       image: "img/holaplex-cover.png",
       navbar: {
@@ -71,12 +76,12 @@ const config = {
           // },
           {
             to: "/api",
-            label: "API",
+            label: "API Reference",
             position: "left",
           },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: "https://github.com/holaplex/hub",
+            href: "https://github.com/holaplex",
             label: "GitHub",
             position: "right",
           },
@@ -120,7 +125,7 @@ const config = {
               // },
               {
                 label: "GitHub",
-                href: "https://github.com/holaplex/hub",
+                href: "https://github.com/holaplex",
               },
             ],
           },

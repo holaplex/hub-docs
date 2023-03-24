@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+A collection of wallets assigned to different entities in the Holaplex ecosystem.
 
 ```graphql
 type Treasury {
@@ -33,23 +33,25 @@ type Treasury {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique identifier for the treasury.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>vaultId</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The associated Fireblocks vault ID.
+## Reference
+[Vault Objects](https://docs.fireblocks.com/api/#vault-objects)
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The creation datetime of the vault.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>wallets</b></code>](#)<Bullet />[`[Wallet!]`](/api/objects/wallet) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
-> 
+> The treasury's associated wallets.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>wallet</b></code>](#)<Bullet />[`Wallet`](/api/objects/wallet) <Badge class="secondary" text="object"/>
-> 
+> Lookup a wallet based on its `asset_type`.
 > ##### [<code style={{ fontWeight: 'normal' }}>Treasury.wallet.<b>assetType</b></code>](#)<Bullet />[`AssetType!`](/api/enums/asset-type) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
 > 
 > 
