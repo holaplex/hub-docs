@@ -5,9 +5,21 @@ sidebar_position: 5
 Pricing
 =======
 
-|  | Free Tier | Hub | Self Hosted |
-| --- | --- | --- | --- |
-| Description | For developers to build solutions using Hub | When ready for production | When ready for production |
-| Fixed Fee (usage and size based) | free | Up to $5,000 | Based upon request |
-| Royalties  (Primary and Secondary) | 0.5% | Up to 1.5% | Up to 5% |
-| Action Fees  (on top of costs for mint fees) | 0% | Up to 5% | Up to 7.5% |
+Free Tier
+---------
+
+-   For Developers to develop and build solutions on to
+-   For Educational programs and hacker houses
+-   OSS Contributions expected
+
+Hub
+---
+
+-   For small-medium businesses looking to grow their web3 offerings
+-   No OSS contributions expected
+
+Managed Hosting
+---------------
+
+-   For experienced web3 native teams, large businesses, household brands, and enterprises ready to build a web3 ERP platform
+-   OSS Contributions expected
