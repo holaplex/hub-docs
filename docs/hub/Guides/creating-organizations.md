@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 Creating Organizations
 ======================
 
@@ -16,7 +20,7 @@ Step-by-Step Guide to Creating an Organization
 
 ### Option 1: Creating an Organization During Sign-Up
 
-1.  Visit [hub.holaplex.com](http://hub.holaplex.com/) and click on the "Sign Up" button.
+1.  Visit [hub.holaplex.com](http://hub.holaplex.dev/) and click on the "Sign Up" button.
 2.  Complete the registration form.
 3.  After completing the first form, you will be prompted to create an organization. Enter a unique and descriptive name for your organization and pick an appropriate logo. Don't worry, you can change these later.
 4.  Click "Create Organization" to proceed.
