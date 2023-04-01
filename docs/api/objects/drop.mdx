@@ -27,6 +27,8 @@ type Drop {
   price: Int!
   createdById: UUID!
   createdAt: NaiveDateTime!
+  pausedAt: NaiveDateTime
+  shutdownAt: NaiveDateTime
   collection: Collection!
   status: DropStatus!
 }
@@ -67,6 +69,15 @@ type Drop {
 > The date and time in UTC when the drop was created.
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>Drop.<b>pausedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Drop.<b>shutdownAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+> The shutdown_at field represents the date and time in UTC when the drop was shutdown
+If it is null, the drop is currently not shutdown
+> 
+
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>collection</b></code>](#)<Bullet />[`Collection!`](/api/objects/collection) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
 > The collection for which the drop is managing mints.
 > 
@@ -79,7 +90,7 @@ type Drop {
 
 ### Member of
 
-[`CreateDropPayload`](/api/objects/create-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/>
+[`CreateDropPayload`](/api/objects/create-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`PauseDropPayload`](/api/objects/pause-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/><Bullet />[`ResumeDropPayload`](/api/objects/resume-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`ShutdownDropPayload`](/api/objects/shutdown-drop-payload)  <Badge class="secondary" text="object"/>
 
 
 

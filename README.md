@@ -28,6 +28,14 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+### Commands
+
+Retrieve the most recent version of the GraphQL schema and generate documentation pages for the "API Reference."
+
+```
+$ yarn run graphql-to-doc
+```
+
 ### Deployment
 
 Using SSH:

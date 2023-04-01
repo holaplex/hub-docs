@@ -1,0 +1,46 @@
+---
+id: shutdown-drop
+title: shutdownDrop
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Shuts down a drop by writing the current UTC timestamp to the shutdown_at field of drop record.
+Returns the `Drop` object on success.
+
+# Errors
+Fails if the drop or collection is not found, or if updating the drop record fails.
+
+```graphql
+shutdownDrop(
+  input: ShutdownDropInput!
+): ShutdownDropPayload!
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>shutdownDrop.<b>input</b></code>](#)<Bullet />[`ShutdownDropInput!`](/api/inputs/shutdown-drop-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`ShutdownDropPayload`](/api/objects/shutdown-drop-payload) <Badge class="secondary" text="object"/>
+> Represents the result of a successful shutdown drop mutation
+> 
+
+
+
+
+

@@ -1,0 +1,40 @@
+---
+id: pause-drop-payload
+title: PauseDropPayload
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Represents the result of a successful pause drop mutation.
+
+```graphql
+type PauseDropPayload {
+  drop: Drop!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>PauseDropPayload.<b>drop</b></code>](#)<Bullet />[`Drop!`](/api/objects/drop) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> The drop that has been paused.
+> 
+
+
+
+### Returned by
+
+[`pauseDrop`](/api/mutations/pause-drop)  <Badge class="secondary" text="mutation"/>
+
+
+
