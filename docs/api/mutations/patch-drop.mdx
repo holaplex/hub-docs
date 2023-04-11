@@ -1,0 +1,44 @@
+---
+id: patch-drop
+title: patchDrop
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+This mutation allows updating a drop and it's associated collection by ID.
+It returns an error if it fails to reach the database, emit update events or assemble the on-chain transaction.
+Returns the `PatchDropPayload` object on success.
+
+```graphql
+patchDrop(
+  input: PatchDropInput!
+): PatchDropPayload!
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>patchDrop.<b>input</b></code>](#)<Bullet />[`PatchDropInput!`](/api/inputs/patch-drop-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`PatchDropPayload`](/api/objects/patch-drop-payload) <Badge class="secondary" text="object"/>
+> Represents the result of a successful patch drop mutation.
+> 
+
+
+
+
+

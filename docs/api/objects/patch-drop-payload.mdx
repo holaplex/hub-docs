@@ -1,6 +1,6 @@
 ---
-id: date-time
-title: DateTime
+id: patch-drop-payload
+title: PatchDropPayload
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,20 +15,26 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Implement the DateTime&#x003C;Utc&#x003E; scalar
-
-The input/output is a string in RFC3339 format.
+Represents the result of a successful patch drop mutation.
 
 ```graphql
-scalar DateTime
+type PatchDropPayload {
+  drop: Drop!
+}
 ```
 
 
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropPayload.<b>drop</b></code>](#)<Bullet />[`Drop!`](/api/objects/drop) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+> The drop that has been patched.
+> 
 
 
-### Member of
 
-[`CreateDropInput`](/api/inputs/create-drop-input)  <Badge class="secondary" text="input"/><Bullet />[`PatchDropInput`](/api/inputs/patch-drop-input)  <Badge class="secondary" text="input"/>
+### Returned by
+
+[`patchDrop`](/api/mutations/patch-drop)  <Badge class="secondary" text="mutation"/>
 
 
 

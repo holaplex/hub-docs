@@ -23,7 +23,12 @@ type Customer {
   projectId: UUID!
   createdAt: NaiveDateTime!
   updatedAt: NaiveDateTime
+  addresses: [String!]
+  mints: [CollectionMint!]
   treasury: Treasury
+  wallet(
+  assetId: AssetType
+): [Wallet!]
 }
 ```
 
@@ -46,8 +51,23 @@ type Customer {
 > An optional datetime indicating the last time the customer record was updated. If the customer record has not been updated, this field will be `null`.
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>Customer.<b>addresses</b></code>](#)<Bullet />[`[String!]`](/api/scalars/string) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> Returns all the wallet addresses associated with the customer. The blockchain of the address is not included and they are in no particular order. In the future, the blockchain may be indicated with a pattern of &#x007B;blockchain&#x007D;:&#x007B;address&#x007D;.
+This field returns null when there is no treasury assigned to the customer yet.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Customer.<b>mints</b></code>](#)<Bullet />[`[CollectionMint!]`](/api/objects/collection-mint) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> The NFTs owned by any of the customers' wallets.
+> 
+
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>treasury</b></code>](#)<Bullet />[`Treasury`](/api/objects/treasury) <Badge class="secondary" text="object"/>
 > The treasury assigned to the customer, which contains the customer's wallets.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Customer.<b>wallet</b></code>](#)<Bullet />[`[Wallet!]`](/api/objects/wallet) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Customer.wallet.<b>assetId</b></code>](#)<Bullet />[`AssetType`](/api/enums/asset-type) <Badge class="secondary" text="enum"/>
+> 
 > 
 
 

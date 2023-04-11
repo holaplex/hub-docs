@@ -1,0 +1,70 @@
+---
+id: patch-drop-input
+title: PatchDropInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Input object for patching a drop and associated collection by ID
+
+```graphql
+input PatchDropInput {
+  id: UUID!
+  price: Int
+  startTime: DateTime
+  endTime: DateTime
+  sellerFeeBasisPoints: Int
+  metadataJson: MetadataJsonInput
+  creators: [CollectionCreatorInput!]
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropInput.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The unique identifier of the drop
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropInput.<b>price</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> The new price for the drop in the native token of the blockchain
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropInput.<b>startTime</b></code>](#)<Bullet />[`DateTime`](/api/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> The new start time for the drop in UTC
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropInput.<b>endTime</b></code>](#)<Bullet />[`DateTime`](/api/scalars/date-time) <Badge class="secondary" text="scalar"/>
+> The new end time for the drop in UTC
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropInput.<b>sellerFeeBasisPoints</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> The new seller fee basis points for the drop
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropInput.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJsonInput`](/api/inputs/metadata-json-input) <Badge class="secondary" text="input"/>
+> The new metadata JSON for the drop
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchDropInput.<b>creators</b></code>](#)<Bullet />[`[CollectionCreatorInput!]`](/api/inputs/collection-creator-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> The creators of the drop
+> 
+
+
+
+### Member of
+
+[`patchDrop`](/api/mutations/patch-drop)  <Badge class="secondary" text="mutation"/>
+
+
+
