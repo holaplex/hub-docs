@@ -1,6 +1,6 @@
 ---
-id: date-time
-title: DateTime
+id: reactivate-member-input
+title: ReactivateMemberInput
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,20 +15,26 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Implement the DateTime&#x003C;Utc&#x003E; scalar
-
-The input/output is a string in RFC3339 format.
+No description
 
 ```graphql
-scalar DateTime
+input ReactivateMemberInput {
+  id: UUID!
+}
 ```
 
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>ReactivateMemberInput.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
 
 
 
 ### Member of
 
-[`CreateDropInput`](/api/inputs/create-drop-input)  <Badge class="secondary" text="input"/><Bullet />[`PatchDropInput`](/api/inputs/patch-drop-input)  <Badge class="secondary" text="input"/>
+[`reactivateMember`](/api/mutations/reactivate-member)  <Badge class="secondary" text="mutation"/>
 
 
 

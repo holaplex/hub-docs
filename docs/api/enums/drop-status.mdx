@@ -26,6 +26,7 @@ enum DropStatus {
   CREATING
   PAUSED
   SHUTDOWN
+  FAILED
 }
 ```
 
@@ -53,11 +54,15 @@ enum DropStatus {
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>PAUSED</b></code>](#) 
-> 
+> The drop is temporarily paused and cannot be minted at the moment.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>SHUTDOWN</b></code>](#) 
+> The drop is permanently shut down and can no longer be minted.
 > 
+
+#### [<code style={{ fontWeight: 'normal' }}>DropStatus.<b>FAILED</b></code>](#) 
+> The creation process for the drop has failed
 > 
 
 

@@ -26,6 +26,7 @@ type Member {
   createdAt: NaiveDateTime!
   revokedAt: NaiveDateTime
   inviteId: UUID!
+  deactivatedAt: NaiveDateTime
   organization: Organization
   invite: Invite
 }
@@ -62,6 +63,10 @@ type Member {
 > The ID of the invitation that the member accepted to join the organization.
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>Member.<b>deactivatedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+> The datetime, in UTC, when the member was deactivated from the organization.
+> 
+
 #### [<code style={{ fontWeight: 'normal' }}>Member.<b>organization</b></code>](#)<Bullet />[`Organization`](/api/objects/organization) <Badge class="secondary" text="object"/>
 > The Holaplex organization to which the member belongs, representing an individual who has been granted access to the organization.
 > 
@@ -71,6 +76,10 @@ type Member {
 > 
 
 
+
+### Returned by
+
+[`deactivateMember`](/api/mutations/deactivate-member)  <Badge class="secondary" text="mutation"/><Bullet />[`reactivateMember`](/api/mutations/reactivate-member)  <Badge class="secondary" text="mutation"/>
 
 ### Member of
 

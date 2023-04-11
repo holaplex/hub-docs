@@ -1,0 +1,75 @@
+---
+id: purchase
+title: Purchase
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Represents the purchase of an NFT.
+
+```graphql
+type Purchase {
+  id: UUID!
+  mintId: UUID!
+  dropId: UUID
+  wallet: String!
+  spent: Int!
+  txSignature: String
+  status: CreationStatus!
+  createdAt: NaiveDateTime!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the purchase.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>mintId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the NFT being purchased.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>dropId</b></code>](#)<Bullet />[`UUID`](/api/scalars/uuid) <Badge class="secondary" text="scalar"/>
+> The ID of the drop that facilitated the purchase, if any.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>wallet</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The wallet address of the buyer.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>spent</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The amount spent on the purchase.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>txSignature</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> The signature of the transaction, if any.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>status</b></code>](#)<Bullet />[`CreationStatus!`](/api/enums/creation-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> The status of the creation of the NFT.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Purchase.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The date and time when the purchase was created.
+> 
+
+
+
+### Member of
+
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/api/objects/drop)  <Badge class="secondary" text="object"/>
+
+
+

@@ -22,12 +22,12 @@ type Wallet {
   address: String!
   mints: [CollectionMint!]
   treasuryId: UUID!
-  assetId: AssetType!
   legacyAddress: String!
   tag: String!
   createdAt: NaiveDateTime!
   removedAt: NaiveDateTime
   createdBy: UUID!
+  assetId: AssetType!
 }
 ```
 
@@ -44,10 +44,6 @@ type Wallet {
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>treasuryId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
-> 
-
-#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>assetId</b></code>](#)<Bullet />[`AssetType!`](/api/enums/asset-type) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
-> The wallet's associated blockchain.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>legacyAddress</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
@@ -70,11 +66,15 @@ type Wallet {
 > 
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>assetId</b></code>](#)<Bullet />[`AssetType!`](/api/enums/asset-type) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> The wallet's associated blockchain.
+> 
+
 
 
 ### Member of
 
-[`CreateCustomerWalletPayload`](/api/objects/create-customer-wallet-payload)  <Badge class="secondary" text="object"/><Bullet />[`Treasury`](/api/objects/treasury)  <Badge class="secondary" text="object"/>
+[`CreateCustomerWalletPayload`](/api/objects/create-customer-wallet-payload)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`Treasury`](/api/objects/treasury)  <Badge class="secondary" text="object"/>
 
 
 

@@ -26,7 +26,9 @@ type CollectionMint {
   creationStatus: CreationStatus!
   createdBy: UUID!
   createdAt: NaiveDateTime!
+  signature: String
   collection: Collection
+  metadataJson: MetadataJson
 }
 ```
 
@@ -61,15 +63,25 @@ type CollectionMint {
 > 
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>signature</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>collection</b></code>](#)<Bullet />[`Collection`](/api/objects/collection) <Badge class="secondary" text="object"/>
 > 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJson`](/api/objects/metadata-json) <Badge class="secondary" text="object"/>
+> The metadata json associated to the collection.
+## References
+[Metaplex v1.1.0 Standard](https://docs.metaplex.com/programs/token-metadata/token-standard)
 > 
 
 
 
 ### Member of
 
-[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
 
 
 
