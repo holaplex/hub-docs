@@ -8,15 +8,15 @@ Why use Hub?
 Smoothest NFT Experience
 ------------------------
 
-For experiences built on the hub, users don't have to worry about -
+For experiences built on the Hub, users don't have to worry about -
 
 -   Installing a cryptocurrency wallet
 -   Storing that seed phrase in a careful location
 -   Going to an exchange to buy the appropriate cryptocurrency
--   Sending that cryptocurrency to send to their new wallet
+-   Sending that cryptocurrency to their new wallet
 -   Thinking about what they're doing with their life while going through all these steps only to claim a free NFT
 
-Easily saving 15 minutes of time, experiences built on the hub are designed to be as easy & familiar as Web2 experiences. Users can sign up via an Email login, claim an NFT or buy one using their credit cards, and once they're ready, they can take these assets out to their own wallet.
+Easily saving 15 minutes of time, experiences built on the Hub are designed to be as easy & familiar as Web2 experiences. Users can sign up via an Email login, claim an NFT or buy one using their credit cards, and once they're ready, they can take these assets out to their own wallet.
 
 Pretty cool, right? But that's not all.
 
@@ -39,4 +39,4 @@ The Hub aims to empower everyone with best-in-class tools to create & manage top
 -   Reward customer loyalty
 -   Track advanced customer metrics
 
-And much more! While the Hub has an extended list of features, what you can do & what you can build with the hub has infinite possibilities. 
+And much more! While the Hub has an extended list of features, what you can do & what you can build with the Hub has infinite possibilities. 
