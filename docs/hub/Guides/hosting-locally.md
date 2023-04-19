@@ -74,28 +74,28 @@ Installation
 
     Adding the drop id after the [localhost:3000/](http://localhost:3000/) url should bring you to the relevant drops page from where you'll be able to mint your NFT.
 
-3.  **Start PostgreSQL in a Docker container:**
+4.  **Start PostgreSQL in a Docker container:**
 
     ```bash
     docker compose up -d
 
     ```
 
-4.  **Install dependencies:**
+5.  **Install dependencies:**
 
     ```bash
     npm install
 
     ```
 
-5.  **Set up the database:**
+6.  **Set up the database:**
 
     ```bash
     npm run reset
 
     ```
 
-6.  **Set up Prisma client:**
+7.  **Set up Prisma client:**
 
     ```bash
     npm run generate
