@@ -37,8 +37,8 @@ Installation
 2.  **Clone the repository:**
 
     ```bash
-    git clone <https://github.com/user/holaplex-sxsw-demo.git>
-    cd holaplex-sxsw-demo
+    git clone <https://github.com/holaplex/eluvio-sxsw>
+    cd eluvio-sxsw
 
     ```
 
