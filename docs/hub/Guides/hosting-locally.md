@@ -42,6 +42,38 @@ Installation
 
     ```
 
+3. **Create env file:**
+
+    Create a `.env` file at the root of the project and add the following environment variables:
+
+    ```
+    NEXT_PUBLIC_FQDN=http://localhost:3000
+
+    # Set up SSO with Google
+    GOOGLE_CLIENT_ID=your_google_client_id
+    GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+    # Database
+    DATABASE_URL=postgres://postgres:holaplex@localhost:5432/hub-starter
+    POSTGRES_DB=hub-starter
+    POSTGRES_PASSWORD=holaplex
+
+    # Holaplex
+    HOLAPLEX_API_ENDPOINT=your_holaplex_api_endpoint
+    HOLAPLEX_AUTH_TOKEN=your_holaplex_auth_token
+    HOLAPLEX_WEBHOOK_SECRET=your_holaplex_webhook_secret
+    HOLAPLEX_PROJECT_ID=your_holaplex_project_id
+    NEXT_PUBLIC_FQDN=http://localhost:3000
+
+    ```
+
+    Replace the placeholder values with your actual credentials and API keys.
+
+    Your project ID refers to the numbers & letters you see in the url bar after /projects/. 
+    In the same way, you can navigate to each of your drops by the copying the part of the url after the /drops/ section & and pasting it after localhost.
+
+    Adding the drop id after the [localhost:3000/](http://localhost:3000/) url should bring you to the relevant drops page from where you'll be able to mint your NFT.
+
 3.  **Start PostgreSQL in a Docker container:**
 
     ```bash
@@ -132,33 +164,5 @@ Creating Webhooks
 Configuration
 -------------
 
-Create a `.env` file at the root of the project and add the following environment variables:
 
-```
-NEXT_PUBLIC_FQDN=http://localhost:3000
-
-# Set up SSO with Google
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-
-# Database
-DATABASE_URL=postgres://postgres:holaplex@localhost:5432/hub-starter
-POSTGRES_DB=hub-starter
-POSTGRES_PASSWORD=holaplex
-
-# Holaplex
-HOLAPLEX_API_ENDPOINT=your_holaplex_api_endpoint
-HOLAPLEX_AUTH_TOKEN=your_holaplex_auth_token
-HOLAPLEX_WEBHOOK_SECRET=your_holaplex_webhook_secret
-HOLAPLEX_PROJECT_ID=your_holaplex_project_id
-NEXT_PUBLIC_FQDN=http://localhost:3000
-
-```
-
-Replace the placeholder values with your actual credentials and API keys.
-
-Your project ID refers to the numbers & letters you see in the url bar after /projects/. 
-In the same way, you can navigate to each of your drops by the copying the part of the url after the /drops/ section & and pasting it after localhost.
-
-Adding the drop id after the [localhost:3000/](http://localhost:3000/) url should bring you to the relevant drops page from where you'll be able to mint your NFT.
 
