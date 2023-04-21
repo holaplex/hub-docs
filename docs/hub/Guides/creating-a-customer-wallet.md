@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # Creating a Customer & Wallet
@@ -31,7 +31,7 @@ In this guide, we'll walk you through the process of creating a wallet on Holap
 ## Prerequisites
 
 - A Holaplex Hub account
-- Access to the Holaplex Hub GraphQL API
+- Access to the Holaplex Hub GraphQL API (an access token can be generated on Hub's "Credentials" page)
 - A GraphQL client, such as [Apollo Client](https://www.apollographql.com/client/) or a tool like [GraphQL Playground](https://github.com/graphql/graphql-playground)
 
 ## Step 1: Create a Customer
@@ -64,6 +64,8 @@ Example:
 }
 ```
 
+The `project-id` can be found in the URL of a project page on Hub. For example, if your Hub project page URL is `https://hub.holaplex.com/projects/a56e7745-37a2-40b7-9d25-d5c20b6fc137`, then the corresponding `project-id` is `'a56e7745-37a2-40b7-9d25-d5c20b6fc137'`.
+
 ### Example Request
 
 ```graphql
@@ -75,6 +77,11 @@ mutation {
   }
 }
 ```
+CURL:
+```
+curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"mutation CreateCustomer($input: CreateCustomerInput!) {\n  createCustomer(input: $input) {\n    customer {\n      id\n    }\n  }\n}\n","variables":{"input":{"project":"PROJECT-ID"}}}' --compressed
+```
+Replace `ACCESS-TOKEN` and `PROJECT-ID`
 
 ### Example Response
 
