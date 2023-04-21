@@ -73,6 +73,11 @@ mutation {
   }
 }
 ```
+CURL:
+```
+curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"mutation MintNft($input: MintDropInput!) {\n  mintEdition(input: $input) {\n    collectionMint {\n      address\n      owner\n    }\n  }\n}\n","variables":{"input":{"drop":"DROP-ID","recipient":"RECIPIENT-WALLET-ADDRESS"}}}' --compressed
+```
+Replace `ACCESS-TOKEN`, `DROP-ID`, and `RECIPIENT-WALLET-ADDRESS`
 
 ### Example Response
 
@@ -91,9 +96,27 @@ mutation {
 
 ## Input Parameters Explained
 
+- `drop`: The UUID of the drop that you want to mint. It can be found in the URL of the Hub's drops page
 - `recipient`: The wallet address where the minted drop should be sent. This should be the address of the wallet created on the Holaplex Hub.
-- `drop`: The UUID of the drop that you want to mint.
 
+Note to find a customer's wallet address, perform the following query, e.g.:
+```
+{
+  project(id:"a56e7745-37a2-40b7-9d25-d5c20b6fc137") {
+		name
+    customer(id:"33dedde4-543d-4653-bc10-db0a38e719cc") {
+      wallet {
+        address
+      }
+    }
+  }
+}
+```
+CURL:
+```
+curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"{\n  project(id:\"PROJECT-ID\") {\n\t\tname\n    customer(id:\"CUSTOMER-ID\") {\n      wallet {\n        address\n      }\n    }\n  }\n}"}' --compressed
+```
+Replace `ACCESS-TOKEN`, `PROJECT-ID`, and `CUSTOMER-ID`
 
 After successfully minting the drop, you will receive a response containing the collection address and the owner wallet address. The collection address can be used to manage and query the drop on the Holaplex Hub platform.
 
