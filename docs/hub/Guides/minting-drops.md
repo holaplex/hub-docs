@@ -22,7 +22,7 @@ mutation MintNft($input: MintDropInput!) {
 - A Holaplex Hub account
 - An existing wallet created on the Holaplex Hub (see the previous guide on creating a wallet)
 - Access to the Holaplex Hub GraphQL API
-- A GraphQL client, such as [Apollo Client](https://www.apollographql.com/client/) or a tool like [Postman](https://www.postman.com/) or [GraphQL Playground](https://github.com/graphql/graphql-playground)
+- A GraphQL client, such as [Apollo Client](https://www.apollographql.com/client/) or a tool like [GraphQL Playground](https://github.com/graphql/graphql-playground)
 
 ## Minting a Drop
 
