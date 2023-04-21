@@ -31,7 +31,7 @@ In this guide, we'll walk you through the process of creating a wallet on Holap
 ## Prerequisites
 
 - A Holaplex Hub account
-- Access to the Holaplex Hub GraphQL API
+- Access to the Holaplex Hub GraphQL API (an access token can be generated on Hub's "Credentials" page)
 - A GraphQL client, such as [Apollo Client](https://www.apollographql.com/client/) or a tool like [GraphQL Playground](https://github.com/graphql/graphql-playground)
 
 ## Step 1: Create a Customer
