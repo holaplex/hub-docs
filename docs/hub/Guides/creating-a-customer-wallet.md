@@ -144,6 +144,11 @@ mutation {
   }
 }
 ```
+CURL:
+```
+curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {\n  createCustomerWallet(input: $input) {\n    wallet {\n      address\n    }\n  }\n}","variables":{"input":{"customer":"CUSTOMER-ID","assetType":"SOL"}}}' --compressed
+```
+Replace `ACCESS-TOKEN` and `CUSTOMER-ID`
 
 ### Example Response
 
@@ -162,3 +167,22 @@ mutation {
 
 After completing these two steps, you will have successfully created a wallet for the customer on Holaplex Hub.
 The wallet address can be used for minting NFTs, trading, and other wallet-related operations.
+
+Note to find a customer's wallet address, perform the following query, e.g.:
+```
+{
+  project(id:"a56e7745-37a2-40b7-9d25-d5c20b6fc137") {
+		name
+    customer(id:"33dedde4-543d-4653-bc10-db0a38e719cc") {
+      wallet {
+        address
+      }
+    }
+  }
+}
+```
+CURL:
+```
+curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"{\n  project(id:\"PROJECT-ID\") {\n\t\tname\n    customer(id:\"CUSTOMER-ID\") {\n      wallet {\n        address\n      }\n    }\n  }\n}"}' --compressed
+```
+Replace `ACCESS-TOKEN`, `PROJECT-ID`, and `CUSTOMER-ID`
