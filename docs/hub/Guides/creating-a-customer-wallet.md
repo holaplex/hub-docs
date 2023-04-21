@@ -64,6 +64,8 @@ Example:
 }
 ```
 
+The `project-id` can be found in the URL of a project page on Hub. For example, if your Hub project page URL is `https://hub.holaplex.com/projects/a56e7745-37a2-40b7-9d25-d5c20b6fc137`, then the corresponding `project-id` is `'a56e7745-37a2-40b7-9d25-d5c20b6fc137'`.
+
 ### Example Request
 
 ```graphql
