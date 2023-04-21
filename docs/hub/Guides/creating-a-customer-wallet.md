@@ -77,6 +77,11 @@ mutation {
   }
 }
 ```
+CURL:
+```
+curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"mutation CreateCustomer($input: CreateCustomerInput!) {\n  createCustomer(input: $input) {\n    customer {\n      id\n    }\n  }\n}\n","variables":{"input":{"project":"PROJECT-ID"}}}' --compressed
+```
+Replace `ACCESS-TOKEN` and `PROJECT-ID`
 
 ### Example Response
 
