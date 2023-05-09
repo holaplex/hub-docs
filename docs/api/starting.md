@@ -23,7 +23,7 @@ Here's an example of what the Authorization header should look like:
 curl -X POST -H "Authorization: <access_token>" \
 -H "Content-Type: application/json" \
 -d '{"query": "query($id: UUID!) { organization(id: $id) { id name } }", "variables": {"id": "<organization_id>"}}' \
-https://api.holaplex.dev/graphql
+https://api.holaplex.com/graphql
 ```
 
 Replace <access_token> with a valid access token obtained through the authentication process, and replace <organization_id> with the ID of the organization you want to query.
@@ -32,8 +32,8 @@ To obtain an API access token, you'll need to create an API credential using Hub
 
 When sending GraphQL requests to the Holaplex Hub API, you can use any GraphQL client library or tool that supports sending headers with requests, such as Apollo Client or Postman. Simply include the Authorization header with your access token in each request to authenticate your API calls.
 
-
 Use the docs in the sidebar to find out how to use the schema:
 
 - **Allowed operations**: queries and mutations.
 - **Schema-defined types**: scalars, objects, enums, interfaces, unions, and input objects.
+

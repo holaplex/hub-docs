@@ -12,7 +12,7 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://docs.holaplex.dev",
+  url: "https://docs.holaplex.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -32,7 +32,26 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-  plugins: [["@graphql-markdown/docusaurus", graphqlMarkdownConfig]],
+  plugins: [
+    "docusaurus-plugin-markprompt",
+    ["@graphql-markdown/docusaurus", graphqlMarkdownConfig],
+  ],
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+      }),
+    ],
+  ],
   presets: [
     [
       "classic",
@@ -55,7 +74,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: "dark",
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },

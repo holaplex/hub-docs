@@ -6,16 +6,42 @@ pagination_next: null
 pagination_prev: null
 ---
 
+export const Bullet = () => (
+  <>
+    <span
+      style={{
+        fontWeight: "normal",
+        fontSize: ".5em",
+        color: "var(--ifm-color-secondary-darkest)",
+      }}
+    >
+      &nbsp;●&nbsp;
+    </span>
+  </>
+);
 
+export const SpecifiedBy = (props) => (
+  <>
+    Specification
+    <a
+      className="link"
+      style={{ fontSize: "1.5em", paddingLeft: "4px" }}
+      target="_blank"
+      href={props.url}
+      title={"Specified by " + props.url}
+    >
+      ⎘
+    </a>
+  </>
+);
 
-export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+export const Badge = (props) => (
+  <>
+    <span className={"badge badge--" + props.class}>{props.text}</span>
+  </>
+);
 
-export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
-
-export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
-
-
-This mutation creates a new NFT drop and its associated collection. The drop returns immediately with a creation status of CREATING. You can [set up a webhook](https://docs.holaplex.dev/hub/For%20Developers/webhooks-overview) to receive a notification when the drop is ready to be minted.
+This mutation creates a new NFT drop and its associated collection. The drop returns immediately with a creation status of CREATING. You can [set up a webhook](../../hub/For%20Developers/webhooks-overview) to receive a notification when the drop is ready to be minted.
 Error
 If the drop cannot be saved to the database or fails to be emitted for submission to the desired blockchain, the mutation will result in an error.
 
@@ -25,20 +51,14 @@ createDrop(
 ): CreateDropPayload!
 ```
 
-
 ### Arguments
 
 #### [<code style={{ fontWeight: 'normal' }}>createDrop.<b>input</b></code>](#)<Bullet />[`CreateDropInput!`](/api/inputs/create-drop-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
-> 
-> 
+
+>
 
 ### Type
 
 #### [`CreateDropPayload`](/api/objects/create-drop-payload) <Badge class="secondary" text="object"/>
-> 
-> 
 
-
-
-
-
+>

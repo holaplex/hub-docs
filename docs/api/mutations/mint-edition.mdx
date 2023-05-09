@@ -6,17 +6,45 @@ pagination_next: null
 pagination_prev: null
 ---
 
+export const Bullet = () => (
+  <>
+    <span
+      style={{
+        fontWeight: "normal",
+        fontSize: ".5em",
+        color: "var(--ifm-color-secondary-darkest)",
+      }}
+    >
+      &nbsp;●&nbsp;
+    </span>
+  </>
+);
 
+export const SpecifiedBy = (props) => (
+  <>
+    Specification
+    <a
+      className="link"
+      style={{ fontSize: "1.5em", paddingLeft: "4px" }}
+      target="_blank"
+      href={props.url}
+      title={"Specified by " + props.url}
+    >
+      ⎘
+    </a>
+  </>
+);
 
-export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+export const Badge = (props) => (
+  <>
+    <span className={"badge badge--" + props.class}>{props.text}</span>
+  </>
+);
 
-export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+This mutation mints an NFT edition for a specific drop ID. The mint returns immediately with a creation status of CREATING. You can [set up a webhook](../../hub/For Developers/webhooks-overview.md) to receive a notification when the mint is accepted by the blockchain.
 
-export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
-
-
-This mutation mints an NFT edition for a specific drop ID. The mint returns immediately with a creation status of CREATING. You can [set up a webhook](https://docs.holaplex.dev/hub/For%20Developers/webhooks-overview) to receive a notification when the mint is accepted by the blockchain.
 # Errors
+
 If the mint cannot be saved to the database or fails to be emitted for submission to the desired blockchain, the mutation will result in an error.
 
 ```graphql
@@ -25,20 +53,14 @@ mintEdition(
 ): MintEditionPayload!
 ```
 
-
 ### Arguments
 
 #### [<code style={{ fontWeight: 'normal' }}>mintEdition.<b>input</b></code>](#)<Bullet />[`MintDropInput!`](/api/inputs/mint-drop-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
-> 
-> 
+
+>
 
 ### Type
 
 #### [`MintEditionPayload`](/api/objects/mint-edition-payload) <Badge class="secondary" text="object"/>
-> 
-> 
 
-
-
-
-
+>
