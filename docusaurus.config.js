@@ -32,26 +32,7 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-  plugins: [
-    "docusaurus-plugin-markprompt",
-    ["@graphql-markdown/docusaurus", graphqlMarkdownConfig],
-  ],
-  themes: [
-    // ... Your other themes.
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        // language: ["en", "zh"],
-        // ```
-      }),
-    ],
-  ],
+  plugins: [["@graphql-markdown/docusaurus", graphqlMarkdownConfig]],
   presets: [
     [
       "classic",
