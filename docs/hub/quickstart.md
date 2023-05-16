@@ -92,4 +92,4 @@ mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {
 
 Here's a detailed [guide](hub/Guides/creating-a-customer-wallet) on creating a customer and wallet.
 
-Hopefully, you now have enough to play around with & create your own experience. There's a lot more stuff in our API reference, so be sure to check that out!
+Thanks for reading through the Quickstart! If you have questions, please reach out to us at [support@holaplex.com](mailto:support@holaplex.com).
