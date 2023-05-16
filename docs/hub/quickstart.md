@@ -45,13 +45,15 @@ For a more detailed description of creating a project, please check out our step
 
 Drops are where the magic happens. Each "drop" is a collection of limited edition NFTs to be minted, numbered from 1 to N, where N is the maximum supply for the drop you've chosen.
 
-To create a drop, first select a project where the drop should live. Then click **Create drop**. Follow the prompts to enter assets and metadata for your drop, royalty specifications, and a start/end time for minting.
+To create a drop, first select a project where the drop should live. From the project page, click **Create drop**. Follow the prompts to enter metadata and upload assets for your drop, specify a royalty structure, and specify a start and end time for minting.
 
 As always, if you get stuck, you can check out this detailed [guide](hub/Guides/creating-drops) on creating drops.
 
 ## Minting Drops
 
-To mint a drop, simply use this GraphQL mutation -
+Once a drop is created, the possibilities for minting are endless. Take a look at our starter repos to spin up a [sample mint page](https://github.com/holaplex/hub-starter-mint) or an [NFT scavenger hunt](https://github.com/holaplex/hub-starter-scavenger).
+
+To incorporate minting into your own application, use the [Hub API](api). For example, a request via this GraphQL mutation will mint an NFT into a specified wallet:
 
 ```graphql
 mutation MintNft($input: MintDropInput!) {
