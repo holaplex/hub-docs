@@ -5,7 +5,7 @@ slug: /
 
 # Quickstart
 
-In this quickstart guide, we'll quickly go through **Hub in less than 5 minutes**.
+Learn how to create a drop in Hub in **minutes**.
 
 ## What is Hub?
 
@@ -13,19 +13,39 @@ Hub allows you to create and manage your **NFT Experiences**. Put simply, you ca
 
 The possibilities are endless. Click [here](hub/Introduction/what-is-hub) to learn more about Hub. Click [here](hub/Introduction/why-use-hub) to learn more about why you should use Hub.
 
-## Creating a Project
+## Creating a Hub account
+Create an account here: https://hub.holaplex.com/
 
-Think of Projects as a way to organize your campaigns and ideas.
+## Organizations
+### Creating an Organization
+When you first log into Hub, you'll be prompted to create an organization. You'll be awarded 1,000 credits to get your organization started. 
 
-Click on Projects on the sidebar, click on Create a Project, add a relevant name and logo, and click create! It's that simple!
+### Inviting team members
+You can invite team members to your organization on the [Members tab](https://hub.holaplex.com/members). 
 
-If you get stuck here, check out this detailed [guide](hub/Guides/creating-a-project) that walks you step by step.
+We're still configuring Hub's email server. For now, please use the Invite Link (found in the kebab menu) after adding an invitee's email address.
 
-## Creating Drops
+### Joining an Organization
 
-Drops are where the magic happens. Each "drop" is a collection of limited edition NFTs numbered from 1 to N, where N is the maximum supply for the drop you've chosen.
+If you've received an invite link, click to either create an account or sign in, after which you'll automatically be added to that organization.
 
-To create a drop, click on a project from the project's screen, enter the relevant information on the screens that follow, pick a suitable time to schedule the minting, and you're done!
+## Projects
+### Creating a Project
+
+Each organization can have one or more projects. We think of projects as a way to organize our campaigns and ideas.
+
+Click on [Projects](https://hub.holaplex.com/projects) on the sidebar, click on [Create project](https://hub.holaplex.com/projects/new), add a relevant name and logo, and click create.
+
+A treasury wallet will be automatically created for each new project. All members of the organization will have access to its projects.
+
+For a more detailed description of creating a project, please check out our step-by-step [guide](hub/Guides/creating-a-project).
+
+## Drops
+### Creating a Drop
+
+Drops are where the magic happens. Each "drop" is a collection of limited edition NFTs to be minted, numbered from 1 to N, where N is the maximum supply for the drop you've chosen.
+
+To create a drop, first select a project where the drop should live. Then click **Create drop**. Follow the prompts to enter assets and metadata for your drop, royalty specifications, and a start/end time for minting.
 
 As always, if you get stuck, you can check out this detailed [guide](hub/Guides/creating-drops) on creating drops.
 
