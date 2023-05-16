@@ -9,28 +9,26 @@ Learn how to create a drop in Hub in **minutes**.
 
 ## What is Hub?
 
-Hub allows you to create and manage your **NFT Experiences**. Put simply, you can use Hub's APIs and intuitive interface to build great products. You can also leverage Hub's powerful solutions and add exciting Web3 features to your existing product.
+Holaplex Hub (”Hub”), a product by Holaplex, provides a collection of loosely coupled microservices which make it easy to launch NFT campaigns, mint digital collectibles, run loyalty programs, and more through whitelabel interfaces and robust developer APIs.
 
-The possibilities are endless. Click [here](hub/Introduction/what-is-hub) to learn more about Hub. Click [here](hub/Introduction/why-use-hub) to learn more about why you should use Hub.
-
-## Creating a Hub account
+## Create a Hub account
 Create an account here: https://hub.holaplex.com/
 
 ## Organizations
-### Creating an Organization
+### Create an Organization
 When you first log into Hub, you'll be prompted to create an organization. You'll be awarded 1,000 credits to get your organization started. 
 
-### Inviting team members
+### Invite team members
 You can invite team members to your organization on the [Members tab](https://hub.holaplex.com/members). 
 
 We're still configuring Hub's email server. For now, please use the Invite Link (found in the kebab menu) after adding an invitee's email address.
 
-### Joining an Organization
+### Join an Organization
 
 If you've received an invite link, click to either create an account or sign in, after which you'll automatically be added to that organization.
 
 ## Projects
-### Creating a Project
+### Create a Project
 
 Each organization can have one or more projects. We think of projects as a way to organize our campaigns and ideas.
 
@@ -41,7 +39,7 @@ A treasury wallet will be automatically created for each new project. All member
 For a more detailed description of creating a project, please check out our step-by-step [guide](hub/Guides/creating-a-project).
 
 ## Drops
-### Creating a Drop
+### Create a Drop
 
 Drops are where the magic happens. Each "drop" is a collection of limited edition NFTs to be minted, numbered from 1 to N, where N is the maximum supply for the drop you've chosen.
 
@@ -49,7 +47,7 @@ To create a drop, first select a project where the drop should live. From the pr
 
 As always, if you get stuck, you can check out this detailed [guide](hub/Guides/creating-drops) on creating drops.
 
-## Minting Drops
+## Mint Drops
 
 Once a drop is created, the possibilities for minting are endless. Take a look at our starter repos to spin up a [sample mint page](https://github.com/holaplex/hub-starter-mint) or an [NFT scavenger hunt](https://github.com/holaplex/hub-starter-scavenger).
 
