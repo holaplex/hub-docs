@@ -1,8 +1,0 @@
-{
-  "label": "Introduction",
-  "position": 1,
-  "link": {
-    "type": "generated-index",
-    "description": "Holaplex Hub (”Hub”), a product by Holaplex, provides a collection of loosely coupled microservices which make it easy to launch NFT campaigns, mint digital collectibles, run loyalty programs, and more through whitelabel interfaces and robust developer APIs."
-  }
-}

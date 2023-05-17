@@ -1,12 +1,25 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
+slug: /
 ---
-Why use Hub?
+Introduction
 ================
 
+Holaplex Hub (”Hub”), a product by Holaplex, provides a collection of loosely coupled microservices which make it easy to launch NFT campaigns, mint digital collectibles, run loyalty programs, and more through whitelabel interfaces and robust developer APIs.
 
-Smoothest NFT Experience
-------------------------
+## What is Hub?
+
+Hub is an end-to-end cross-chain enterprise-grade solution for digital assets & NFTs.
+
+Combining a year of experience working with Fortune 500 companies & big brands, we've isolated & amplified the factors that made users stick to a Web3 platform & eliminated the friction that made users leave.
+
+Thus, we've made sure that the NFT experience is smoother than ever before!
+
+<iframe src="https://player.vimeo.com/video/806571448?h=ca5327a661&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+## Why use Hub?
+
+### Smoothest NFT Experience
 
 For experiences built on the Hub, users don't have to worry about -
 
@@ -20,15 +33,13 @@ Easily saving 15 minutes of time, experiences built on the Hub are designed to b
 
 Pretty cool, right? But that's not all.
 
-Intuitive GUI & tools
----------------------
+### Intuitive GUI & tools
 
 The Hub has been designed keeping everyone in mind, not just developers. Although developers can leverage the Hub's SDK and APIs to build their own custom NFT experiences, you can do that too through The Hub's no-code interface!
 
 No knowledge of programming is required. Whether you're a marketing manager in a big company, or a small business owner just dipping your toes in Web3, The Hub's intuitive interface is fairly simple and allows you set up your NFT campaigns in minutes.
 
-Built for all to build
-----------------------
+### Built for all to build
 
 We believe that NFTs are going to be a part of business very soon. Not every small business owner or early-stage founder can afford to hire teams of Web3 developers to manage & launch their NFT campaigns, but now, there's no need to worry.
 
