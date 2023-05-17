@@ -12,7 +12,7 @@ Credits are applied at an **organization level**. Each new organization is grant
 
 ## Spending credits
 
-The number of credits required to perform different Hub operations is reflective based on current market prices. View the current cost of operations at [hub.holaplex.com/credits/costs](https://hub.holaplex.com/credits/costs).
+The number of credits required to perform different Hub operations is based on current market prices. View the current cost of operations at [hub.holaplex.com/credits/costs](https://hub.holaplex.com/credits/costs).
 
 Credits are currently required in order to:
 - Create a drop
