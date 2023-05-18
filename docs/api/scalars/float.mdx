@@ -1,6 +1,6 @@
 ---
-id: date-time
-title: DateTime
+id: float
+title: Float
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,12 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Implement the DateTime&#x003C;FixedOffset&#x003E; scalar
-
-The input/output is a string in RFC3339 format.
+The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).
 
 ```graphql
-scalar DateTime
+scalar Float
 ```
 
 
@@ -28,7 +26,7 @@ scalar DateTime
 
 ### Member of
 
-[`CreateDropInput`](/api/inputs/create-drop-input)  <Badge class="secondary" text="input"/><Bullet />[`CreditDeposit`](/api/objects/credit-deposit)  <Badge class="secondary" text="object"/><Bullet />[`PatchDropInput`](/api/inputs/patch-drop-input)  <Badge class="secondary" text="input"/>
+[`CreditDeposit`](/api/objects/credit-deposit)  <Badge class="secondary" text="object"/>
 
 
 

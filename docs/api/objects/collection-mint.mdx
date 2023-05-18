@@ -15,7 +15,7 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-No description
+Represents a single NFT minted from a collection.
 
 ```graphql
 type CollectionMint {
@@ -27,6 +27,7 @@ type CollectionMint {
   createdBy: UUID!
   createdAt: NaiveDateTime!
   signature: String
+  sellerFeeBasisPoints: Int!
   collection: Collection
   metadataJson: MetadataJson
 }
@@ -36,44 +37,47 @@ type CollectionMint {
 ### Fields
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique ID of the minted NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>collectionId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The ID of the collection the NFT was minted from.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The wallet address of the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>owner</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The wallet address of the owner of the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>creationStatus</b></code>](#)<Bullet />[`CreationStatus!`](/api/enums/creation-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
-> 
+> The status of the NFT creation.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>createdBy</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The unique ID of the creator of the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
+> The date and time when the NFT was created.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>signature</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> The transaction signature associated with the NFT.
 > 
+
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>sellerFeeBasisPoints</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The seller fee basis points (ie royalties) for the NFT.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>collection</b></code>](#)<Bullet />[`Collection`](/api/objects/collection) <Badge class="secondary" text="object"/>
-> 
+> The collection the NFT was minted from.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJson`](/api/objects/metadata-json) <Badge class="secondary" text="object"/>
 > The metadata json associated to the collection.
-## References
 [Metaplex v1.1.0 Standard](https://docs.metaplex.com/programs/token-metadata/token-standard)
 > 
 

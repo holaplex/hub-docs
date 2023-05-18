@@ -23,6 +23,7 @@ type User {
   firstName: String!
   lastName: String!
   email: String!
+  profileImage: String
   createdAt: String!
   updatedAt: String!
   affiliations: [Affiliation!]!
@@ -46,6 +47,10 @@ type User {
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>email</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > The email address associated with the user identity.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>User.<b>profileImage</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> The profile image associated with the user identity.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>User.<b>createdAt</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
