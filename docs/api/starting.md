@@ -11,11 +11,11 @@ sidebar_class_name: navbar__toggle
 
 # Overview
 
-The Holaplex Hub API provides a GraphQL interface for creating NFT-based blockchain applications. It allows users to interact with the API to provision custodial wallets and mint NFT drops on multiple blockchains. The API also provides features for managing users and organizations, as well as subscribing to change events through webhooks. It is not RESTful, and is designed to be accessed using GraphQL. Overall, the Holaplex Hub API is a powerful tool for developers looking to build blockchain applications with support for multiple chains and custodial wallet management.
+The Holaplex Hub API provides a GraphQL interface for creating NFT-based blockchain applications. It allows users to interact with the API to provision custodial wallets and mint NFT drops on multiple blockchains. The API also provides features for managing users and organizations, as well as subscribing to change events through webhooks. It is not RESTful, and is designed to be accessed using GraphQL. Overall, the Holaplex Hub API is a powerful tool for developers looking to build blockchain applications with support for multiple chains and custodial wallet management. 
 
 ## Using the API Explorer
 
-Our API explorer is an interactive interface used to send HTTP requests to our API and view the server responses. Here is how to use it:
+Our [API explorer](https://api.holaplex.com) is an interactive interface used to send HTTP requests to our API and view the server responses. Here is how to use it:
 
 1.  Generate an API Token:
 
