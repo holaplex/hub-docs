@@ -27,6 +27,8 @@ type Organization {
   limit: Int
   offset: Int
 ): [Credential!]!
+  credits: Credits
+  deductionTotals: [DeductionTotals!]
   name: String!
   createdAt: NaiveDateTime!
   deactivatedAt: NaiveDateTime
@@ -84,6 +86,20 @@ A list of API credentials associated with this organization.
 
 ##### [<code style={{ fontWeight: 'normal' }}>Organization.credentials.<b>offset</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
 > 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>credits</b></code>](#)<Bullet />[`Credits`](/api/objects/credits) <Badge class="secondary" text="object"/>
+> Define an asynchronous function to load the credits for the organization
+Returns `Credits` object
+#Errors
+returns error if credits_loader is not found in the context or if the loader fails to load the credits
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Organization.<b>deductionTotals</b></code>](#)<Bullet />[`[DeductionTotals!]`](/api/objects/deduction-totals) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Define an asynchronous function to load the total credits deducted for each action
+Returns `DeductionTotals` object
+#Errors
+returns error if total_deductions_loader is not found in the context or if the loader fails to load the total deductions
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Organization.<b>name</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>

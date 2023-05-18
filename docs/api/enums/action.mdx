@@ -1,0 +1,65 @@
+---
+id: action
+title: Action
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum Action {
+  CREATE_DROP
+  CREATE_WALLET
+  MINT_EDITION
+  RETRY_DROP
+  RETRY_MINT
+  TRANSFER_ASSET
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>Action.<b>CREATE_DROP</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Action.<b>CREATE_WALLET</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Action.<b>MINT_EDITION</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Action.<b>RETRY_DROP</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Action.<b>RETRY_MINT</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Action.<b>TRANSFER_ASSET</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`ActionCost`](/api/objects/action-cost)  <Badge class="secondary" text="object"/><Bullet />[`DeductionTotals`](/api/objects/deduction-totals)  <Badge class="secondary" text="object"/>
+
+
+

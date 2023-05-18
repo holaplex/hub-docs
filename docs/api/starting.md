@@ -11,24 +11,31 @@ sidebar_class_name: navbar__toggle
 
 # Overview
 
-The Holaplex Hub API provides a GraphQL interface for creating NFT-based blockchain applications. It allows users to interact with the API to provision custodial wallets and mint NFT drops on multiple blockchains. The API also provides features for managing users and organizations, as well as subscribing to change events through webhooks. It is not RESTful, and is designed to be accessed using GraphQL. Overall, the Holaplex Hub API is a powerful tool for developers looking to build blockchain applications with support for multiple chains and custodial wallet management.
+The Holaplex Hub API provides a GraphQL interface for creating NFT-based blockchain applications. It allows users to interact with the API to provision custodial wallets and mint NFT drops on multiple blockchains. The API also provides features for managing users and organizations, as well as subscribing to change events through webhooks. It is not RESTful, and is designed to be accessed using GraphQL. Overall, the Holaplex Hub API is a powerful tool for developers looking to build blockchain applications with support for multiple chains and custodial wallet management. 
 
-## Authentication
+## Using the API Explorer
 
-To authenticate with the Holaplex Hub API, you need to include an Authorization header in your GraphQL API requests. The header should contain the word "Bearer" followed by a space, and then your API access token.
+Our [API explorer](https://api.holaplex.com) is an interactive interface used to send HTTP requests to our API and view the server responses. Here is how to use it:
 
-Here's an example of what the Authorization header should look like:
+1.  Generate an API Token:
 
-```
-curl -X POST -H "Authorization: <access_token>" \
--H "Content-Type: application/json" \
--d '{"query": "query($id: UUID!) { organization(id: $id) { id name } }", "variables": {"id": "<organization_id>"}}' \
-https://api.holaplex.com/graphql
-```
+    -   To use the API Explorer, you'll first need to generate an API token. This is found in the Hub Credentials section of the Hub sidebar.
+    -   Click "Create New Token" to generate your unique API token. Make sure to save this in a secure location.
+2.  Use the API Token:
 
-Replace <access_token> with a valid access token obtained through the authentication process, and replace <organization_id> with the ID of the organization you want to query.
+    -   After generating your API token, switch to the 'Headers' tab in the API Explorer.
+    -   Set the following JSON as your headers:
 
-To obtain an API access token, you'll need to create an API credential using Hub Credentials. Once you have an API credential, you can use it to authenticate with the Hub API and make authorized requests.
+    ```json
+    {
+     "Authorization": "<api_token>"
+    }
+    ```
+
+    -   Replace `<api_token>` with the token you generated in step 1. 
+
+Please remember that all API requests must be made with this token. Keep your API token secret to prevent misuse.
+
 
 When sending GraphQL requests to the Holaplex Hub API, you can use any GraphQL client library or tool that supports sending headers with requests, such as Apollo Client or Postman. Simply include the Authorization header with your access token in each request to authenticate your API calls.
 

@@ -85,6 +85,12 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            href: "https://status.holaplex.com/",
+            label: "Status",
+            position: "right",
+          },
+
         ],
       },
       footer: {

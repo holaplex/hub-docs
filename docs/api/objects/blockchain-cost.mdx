@@ -1,0 +1,45 @@
+---
+id: blockchain-cost
+title: BlockchainCost
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Represents the cost of performing an action on a specific blockchain
+
+```graphql
+type BlockchainCost {
+  blockchain: Blockchain!
+  credits: Int!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>BlockchainCost.<b>blockchain</b></code>](#)<Bullet />[`Blockchain!`](/api/enums/blockchain) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> enum that represents the blockchain on which the action is being performed.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>BlockchainCost.<b>credits</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> represents the cost in credits for performing the action on the blockchain.
+> 
+
+
+
+### Member of
+
+[`ActionCost`](/api/objects/action-cost)  <Badge class="secondary" text="object"/>
+
+
+
