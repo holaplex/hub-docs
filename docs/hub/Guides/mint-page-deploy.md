@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 6
 ---
 
 Deploying a Mint Page
@@ -13,6 +13,10 @@ In this guide, we'll fork the mint page starter app and deploy it using Render.
 Prerequisites:
 1. [Render account](https://render.com/)
 2. Drop configured in [Hub](https://hub.holaplex.com/)
+
+Follow along as Mackenzie deploys a mint page here:
+
+<iframe src="https://www.loom.com/embed/7c637cf4aafa4d6e8081c5bf16026e00" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 
 Details
@@ -29,15 +33,13 @@ Fork the repository https://github.com/holaplex/hub-starter-mint and give it a u
     - `backdrop` - background color
     - `contrast` - background color of sale boxes
 
-To do: screenshot of mint page, point out each of these colors
-
 2. Replace the image file: `public/img/logo.png`. The logo has a fixed size - this can be adjusted at `src/app/Home.tsx`.
 
 3. Commit changes and push to the fork.
 
 ### Create Render Blueprint Instance
 
-1. Log in to dashboard.render.com
+1. Log in to [dashboard.render.com](dashboard.render.com)
 
 2. Create a new Blueprint Instance
 
