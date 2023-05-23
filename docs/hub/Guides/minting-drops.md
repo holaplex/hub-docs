@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Minting Drops
+# Minting Drops via API
 
 This guide will walk you through the process of minting a drop on the Holaplex Hub platform using the provided GraphQL mutation -
 
