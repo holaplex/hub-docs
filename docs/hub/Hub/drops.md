@@ -5,9 +5,6 @@ sidebar_position: 4
 Drops
 ==============
 
-Introduction
-------------
-
 Drops are where the magic happens. Each "drop" is a collection of limited edition NFTs numbered from 1 to N, where N is the maximum supply for the drop you've chosen. So, if you set up a drop of 1000 NFTs, each individual NFTs will get a number from #1, #2, #3 and so on, to #1000.
 
 Drops can be used for all kinds of campaigns, whether that's pairing your drop with a physical item, or offering a token-gating experience for your buyers on discord or spotify, NFT drop campaigns are known to drive engagement & revenue when they are done right.
@@ -85,4 +82,4 @@ And you're done! You've just set up a drop!
 You should be able to see your drop on the Manage Drops screen now -
 ![Manage Drops Screen](./ListOfDrops.png)
 
-Awesome job! Now, we must learn how to mint a drop. 
+To learn how to mint your drop, check out the Guides, below.
