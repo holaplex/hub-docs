@@ -2,9 +2,15 @@
 sidebar_position: 4
 ---
 
-# Minting Drops via API
+# Minting a drop via API
 
-This guide will walk you through the process of minting a drop on the Holaplex Hub platform using the provided GraphQL mutation -
+This guide will walk you through minting a drop using Holaplex Hub.
+
+You can try it out using our GraphiQL explorer: [https://api.holaplex.com/](https://api.holaplex.com/).
+
+We'll assume you've already created an account in Hub and set up an organization, project, and drop. If you haven't, please take a look at ADDLINK.
+
+<!-- This guide will walk you through the process of minting a drop on the Holaplex Hub platform using the provided GraphQL mutation -
 
 ```graphql
 mutation MintNft($input: MintDropInput!) {
@@ -15,14 +21,32 @@ mutation MintNft($input: MintDropInput!) {
     }
   }
 }
+``` -->
+
+## Step 1: Authenticate
+
+All API calls need a header of the form
+```
+  { "Authorization": "Your_API_Token" }
 ```
 
-## Prerequisites
+To get an API token:
+    
+  &nbsp; a. Log into [Hub](https://hub.holaplex.com/)
 
-- A Holaplex Hub account
-- An existing wallet created on the Holaplex Hub (see the previous guide on creating a wallet)
-- Access to the Holaplex Hub GraphQL API
-- A GraphQL client, such as [Apollo Client](https://www.apollographql.com/client/) or a tool like [GraphQL Playground](https://github.com/graphql/graphql-playground)
+  &nbsp; b. On your organization's page, open the "Credentials" tab
+
+  &nbsp; c. Click "Generate token"
+
+## Step 2: Create a customer and destination wallet
+
+Each Hub token is minted *to* a specific customer and *into* a customer's wallet. Thus, the first step to mint a token is to create a customer and associated wallet where that token will be sent.
+
+If you've already created a customer and customer wallet, skip to step N.
+
+### Create a customer
+
+Customers are assigned to a 
 
 ## Minting a Drop
 
