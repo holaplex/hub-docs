@@ -1,6 +1,6 @@
 ---
-id: mint-edition-payload
-title: MintEditionPayload
+id: retry-mint-input
+title: RetryMintInput
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,26 +15,26 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Represents payload data for the `mint_edition` mutation
+Represents input data for `retry_mint` mutation with an ID as a field of type UUID
 
 ```graphql
-type MintEditionPayload {
-  collectionMint: CollectionMint!
+input RetryMintInput {
+  id: UUID!
 }
 ```
 
 
 ### Fields
 
-#### [<code style={{ fontWeight: 'normal' }}>MintEditionPayload.<b>collectionMint</b></code>](#)<Bullet />[`CollectionMint!`](/api/objects/collection-mint) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+#### [<code style={{ fontWeight: 'normal' }}>RetryMintInput.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
 
 
 
-### Returned by
+### Member of
 
-[`mintEdition`](/api/mutations/mint-edition)  <Badge class="secondary" text="mutation"/>
+[`retryMint`](/api/mutations/retry-mint)  <Badge class="secondary" text="mutation"/>
 
 
 

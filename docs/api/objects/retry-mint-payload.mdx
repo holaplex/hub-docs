@@ -1,6 +1,6 @@
 ---
-id: mint-edition-payload
-title: MintEditionPayload
+id: retry-mint-payload
+title: RetryMintPayload
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,10 +15,10 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Represents payload data for the `mint_edition` mutation
+Represents payload data for `retry_mint` mutation
 
 ```graphql
-type MintEditionPayload {
+type RetryMintPayload {
   collectionMint: CollectionMint!
 }
 ```
@@ -26,7 +26,7 @@ type MintEditionPayload {
 
 ### Fields
 
-#### [<code style={{ fontWeight: 'normal' }}>MintEditionPayload.<b>collectionMint</b></code>](#)<Bullet />[`CollectionMint!`](/api/objects/collection-mint) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+#### [<code style={{ fontWeight: 'normal' }}>RetryMintPayload.<b>collectionMint</b></code>](#)<Bullet />[`CollectionMint!`](/api/objects/collection-mint) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
 > 
 > 
 
@@ -34,7 +34,7 @@ type MintEditionPayload {
 
 ### Returned by
 
-[`mintEdition`](/api/mutations/mint-edition)  <Badge class="secondary" text="mutation"/>
+[`retryMint`](/api/mutations/retry-mint)  <Badge class="secondary" text="mutation"/>
 
 
 
