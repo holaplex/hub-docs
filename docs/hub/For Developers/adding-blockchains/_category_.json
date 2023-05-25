@@ -1,0 +1,8 @@
+{
+  "label": "Adding Blockchains",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "A guide on adding a new blockchain to HUB API organized by service. This guide is intended for developers who want to add support for a new blockchain to HUB API. It assumes that the developer is familiar with the basics of blockchain technology they are looking to implement and has a basic understanding of the HUB API architecture. For more tailored assistance please open a issue on the HUB service GitHub repository."
+  }
+}
