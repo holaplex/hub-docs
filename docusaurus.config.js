@@ -63,23 +63,12 @@ const config = {
       image: "img/holaplex-cover.png",
       navbar: {
         title: "Holaplex Hub",
-        // logo: {
-        //   alt: 'My Site Logo',
-        //   src: 'img/logo.svg'
-        // },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'Docs'
-          // },
           {
             to: "/api",
             label: "API Reference",
             position: "left",
           },
-          // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: "https://github.com/holaplex",
             label: "GitHub",
@@ -96,22 +85,9 @@ const config = {
       footer: {
         style: "dark",
         links: [
-          //  {
-          //    title: "Docs",
-          //    items: [
-          //      {
-          //        label: "Tutorial",
-          //        to: "/docs/intro",
-          //      },
-          //    ],
-          //  },
           {
             title: "Community",
             items: [
-              // {
-              //   label: 'Stack Overflow',
-              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-              // },
               {
                 label: "Discord",
                 href: "https://discordapp.com/invite/holaplex",
@@ -125,10 +101,6 @@ const config = {
           {
             title: "More",
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog'
-              // },
               {
                 label: "GitHub",
                 href: "https://github.com/holaplex",

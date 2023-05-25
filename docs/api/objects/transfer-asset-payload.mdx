@@ -1,6 +1,6 @@
 ---
-id: mint-edition-payload
-title: MintEditionPayload
+id: transfer-asset-payload
+title: TransferAssetPayload
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,18 +15,18 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Represents payload data for the `mint_edition` mutation
+No description
 
 ```graphql
-type MintEditionPayload {
-  collectionMint: CollectionMint!
+type TransferAssetPayload {
+  mint: CollectionMint!
 }
 ```
 
 
 ### Fields
 
-#### [<code style={{ fontWeight: 'normal' }}>MintEditionPayload.<b>collectionMint</b></code>](#)<Bullet />[`CollectionMint!`](/api/objects/collection-mint) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+#### [<code style={{ fontWeight: 'normal' }}>TransferAssetPayload.<b>mint</b></code>](#)<Bullet />[`CollectionMint!`](/api/objects/collection-mint) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
 > 
 > 
 
@@ -34,7 +34,7 @@ type MintEditionPayload {
 
 ### Returned by
 
-[`mintEdition`](/api/mutations/mint-edition)  <Badge class="secondary" text="mutation"/>
+[`transferAsset`](/api/mutations/transfer-asset)  <Badge class="secondary" text="mutation"/>
 
 
 
