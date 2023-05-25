@@ -37,6 +37,8 @@ You can invite team members to your organization on the Members tab.
 
 We're still configuring Hub's email server. For now, please use the Invite Link (found in the kebab menu) after adding an invitee's email address.
 
+Once a team member has accepted their invitation, they can be deactivated by the organization owner. This option can be found in the kebab menu. Invitations cannot be revoked at this time.
+
 ### Navigating between organizations
 
 Once you've more than one organization, you can manage and switch between multiple organizations with ease. To do this:

@@ -4,6 +4,20 @@ sidebar_position: 7
 
 # Release Notes
 
+## May 25, 2023
+
+Features:
+
+- Owners can activate or reactivate members
+- Update user profile
+
+Fixes:
+
+- Drop API validations, incl. end time is in the future, external and animation urls are urls, creator address are valid for the blockchain
+- Convert UTC timestamps to user’s local time
+- Display error messages when accepting an invite
+- Down-case emails before saving invites and when comparing
+
 ## May 18, 2023
 
 Features:
