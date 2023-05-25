@@ -57,7 +57,7 @@ Click on Next.
 
 **Step 5**
 
-Select the date & time from when you want minting to begin, and when you want minting to end. Once you're done, click on Next.
+Select the date & time in your system's local time when you want minting to begin, and when you want minting to end. Once you're done, click on Next.
 
 ![Mint Date](./MintDate.png)
 
