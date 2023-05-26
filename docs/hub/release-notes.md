@@ -8,7 +8,7 @@ sidebar_position: 7
 
 Features:
 
-- Owners can activate or reactivate members
+- Owners can deactivate or reactivate members
 - Update user profile
 
 Fixes:
