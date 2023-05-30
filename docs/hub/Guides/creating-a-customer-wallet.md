@@ -112,7 +112,7 @@ Replace `ACCESS-TOKEN` and `CUSTOMER-ID`
 ```
 
 After completing these two steps, you will have successfully created a wallet for the customer on Holaplex Hub.
-The wallet address can be used for minting NFTs, trading, and other wallet-related operations.
+The wallet address can be used for minting NFTs, trading, and other wallet-related operations. Customers and wallets can be viewed on the project page in Hub.
 
 Note to find a customer's wallet address, perform the following query, e.g.:
 ```
