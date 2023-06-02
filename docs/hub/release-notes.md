@@ -4,6 +4,27 @@ sidebar_position: 7
 
 # Release Notes
 
+## June 5, 2023
+
+Features:
+
+- Invite team members via email
+- Deactivate/reactivate team members (organization owner only)
+- Password recovery
+- Retry a failed or pending mint via API (see docs for `retryMint` mutation [here](https://docs.holaplex.com/api/mutations/retry-mint))
+- Edit user profile
+
+Fixes:
+
+- API supports use of input arguments in graphql mutations (in addition to using variables)
+- Drop end-time validation
+
+Misc:
+
+- Additional documentation on [Hub API Playground](https://api.holaplex.com/)
+- New open source repo for handling messages: [hub-messages](https://github.com/holaplex/hub-messages) is a Redpanda consumer that listens for events emitted by different HUB services and sends related emails to users
+
+
 ## May 25, 2023
 
 Features:
