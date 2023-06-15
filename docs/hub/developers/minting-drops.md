@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Minting a drop via API
+# Minting a Drop via API
 
 This guide will walk you through minting a drop using Holaplex Hub.
 
