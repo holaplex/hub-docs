@@ -115,8 +115,7 @@ Your mint page is now deployed and ready to use! The URL is available in Render,
 
 ### Troubleshooting
 
-If you have encountered any errors in creating wallets and customers while deploying your app, you may need to dump the database and restart:
+If you have encountered any errors in creating wallets and customers while deploying your app, you may need to clear and recreate the database:
 ```
 npm run reset
-npm run generate
 ```
