@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Projects
 
-Projects are a way to organize your campaigns and ideas within Hub. Projects are comprised of drops and each project is automatically assigned a new treasury wallet. This wallet is the default destination for royalties from drops created within that project, although the royalty structure and destination is fully customizable.
+Projects are a way to organize your campaigns and ideas within Hub. Projects are comprised of drops and each project is automatically assigned a new treasury wallet in each supported blockchain. These wallets are the default destination for royalties from drops created within that project. The royalty structure and destination is fully customizable.
 
 Once you've created a project, you can create drops within each project, set up unique experiences leveraging these drops, fund and manage your project treasury, or even delete a project when your job is done.
 
@@ -37,3 +37,26 @@ Give your project a name and attach your project logo. You can change these late
 Now your project will be visible on your list of projects now.
 
 ![Created the Project](./Done-project-creation.png)
+
+## Createing a project via Hub API
+
+```
+    mutation CreateProject($input:CreateProjectInput!) {
+    createProject(input:$input) {
+        project {
+        id
+        }
+    }
+    }
+```
+
+Variables:
+```
+    {
+    "input": {
+        "organization": "c0871e8f-6c87-44dd-b5e7-d8379e41f718",
+        "name":"Fourth project",
+        "profileImageUrl": "https://nftstorage.link/ipfs/bafybeibypcez3kslno7poouwnqusn7e4rlkb4qsejwmhusqt7oyv6763ku"
+    }
+    }
+```
