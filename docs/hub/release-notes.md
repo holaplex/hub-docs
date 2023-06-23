@@ -4,6 +4,12 @@ sidebar_position: 7
 
 # Release Notes
 
+## June 23, 2023
+
+Features:
+
+- Organization name is no longer unique
+
 ## June 5, 2023
 
 Features:
