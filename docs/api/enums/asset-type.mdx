@@ -6,62 +6,65 @@ pagination_next: null
 pagination_prev: null
 ---
 
+export const Bullet = () => (
+  <>
+    <span
+      style={{
+        fontWeight: "normal",
+        fontSize: ".5em",
+        color: "var(--ifm-color-secondary-darkest)",
+      }}
+    >
+      &nbsp;●&nbsp;
+    </span>
+  </>
+);
 
+export const SpecifiedBy = (props) => (
+  <>
+    Specification
+    <a
+      className="link"
+      style={{ fontSize: "1.5em", paddingLeft: "4px" }}
+      target="_blank"
+      href={props.url}
+      title={"Specified by " + props.url}
+    >
+      ⎘
+    </a>
+  </>
+);
 
-export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
-
-export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
-
-export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
-
+export const Badge = (props) => (
+  <>
+    <span className={"badge badge--" + props.class}>{props.text}</span>
+  </>
+);
 
 Fireblocks-defined blockchain identifiers.
 
 ```graphql
 enum AssetType {
   SOL
-  SOL_TEST
-  MATIC_TEST
   MATIC
-  ETH_TEST
   ETH
 }
 ```
 
-
 ### Values
 
-#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>SOL</b></code>](#) 
+#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>SOL</b></code>](#)
+
 > Mainnet Solana
-> 
 
-#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>SOL_TEST</b></code>](#) 
-> Devnet Solana
-Note: Holaplex uses `SOL_TEST` for provisioning wallets on its staging environment but still submits transactions to mainnet.
-> 
+#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>MATIC</b></code>](#)
 
-#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>MATIC_TEST</b></code>](#) 
-> Ploygon Mumbai Testnet
-Note: Holaplex uses `MATIC_TEST` for provisioning wallets on its staging environment but still submits transactions to mainnet.
-> 
-
-#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>MATIC</b></code>](#) 
 > Mainnet Polygon
-> 
 
-#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>ETH_TEST</b></code>](#) 
-> Note: Holaplex uses `ETH_TEST` for provisioning wallets on its staging environment but still submits transactions to mainnet.
-> 
+#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>ETH</b></code>](#)
 
-#### [<code style={{ fontWeight: 'normal' }}>AssetType.<b>ETH</b></code>](#) 
 > Ethereum Mainnet
-> 
-
-
 
 ### Member of
 
-[`CreateCustomerWalletInput`](/api/inputs/create-customer-wallet-input)  <Badge class="secondary" text="input"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
-
-
-
+[`CreateCustomerWalletInput`](/api/inputs/create-customer-wallet-input) <Badge class="secondary" text="input"/><Bullet />[`Wallet`](/api/objects/wallet) <Badge class="secondary" text="object"/>
