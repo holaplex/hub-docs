@@ -9,6 +9,17 @@ Drops are where the magic happens. Each "drop" is a collection of limited editio
 
 Drops can be used for all kinds of campaigns, whether that's pairing your drop with a physical item, or offering a token-gating experience for your buyers on discord or spotify, NFT drop campaigns are known to drive engagement & revenue when they are done right.
 
+Drops on Solana and Polygon can be created according to the following specifications:
+
+| Field        | Solana                   | Polygon            |
+| ------------ | ------------------------ | ------------------ |
+| Title        | Max length 32            | No limit           |
+| Symbol       | Max length 10            | No limit           |
+| Creators     | Max of 5                 | Max of 1, required |
+| Supply       | Unlimited (supply empty) | Integer required   |
+
+
+
 Follow the steps below to set up a drop →
 
 How to Create a Drop
@@ -31,6 +42,8 @@ From here, if you've never created a drop for your project before, you'll see an
 If you have created a Drop, the "Create Drop" button will be located on the top-right side of the screen.
 
 **Step 3**
+
+<!-- Enter multi-chain specifics here -->
 
 Enter your drop details. Be extra careful here, as these will be the details that your customers see. Once you've entered your details, it should look like this -
 
