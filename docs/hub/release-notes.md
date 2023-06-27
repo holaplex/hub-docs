@@ -4,6 +4,22 @@ sidebar_position: 7
 
 # Release Notes
 
+## June 27, 2023
+
+*Polygon support is here*
+
+Features:
+
+- Create drops on Polygon
+- Mint tokens on Polygon
+- Point starter apps to Polygon drops
+
+## June 23, 2023
+
+Features:
+
+- Organization name is no longer unique
+
 ## June 5, 2023
 
 Features:
