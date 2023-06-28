@@ -21,7 +21,7 @@ Represents a single NFT minted from a collection.
 type CollectionMint {
   id: UUID!
   collectionId: UUID!
-  address: String!
+  address: String
   owner: String!
   creationStatus: CreationStatus!
   createdBy: UUID!
@@ -46,8 +46,10 @@ type CollectionMint {
 > The ID of the collection the NFT was minted from.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The wallet address of the NFT.
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>address</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> The address of the NFT
+On Solana this is the mint address.
+On EVM chains it is the concatenation of the contract address and the token id `&#x007B;contractAddress&#x007D;:&#x007B;tokenId&#x007D;`.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>owner</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>

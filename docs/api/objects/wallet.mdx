@@ -19,22 +19,22 @@ A blockchain wallet is a digital wallet that allows users to securely store, man
 
 ```graphql
 type Wallet {
-  address: String!
+  address: String
   mints: [CollectionMint!]
   treasuryId: UUID!
-  legacyAddress: String!
-  tag: String!
-  createdAt: NaiveDateTime!
-  removedAt: NaiveDateTime
+  createdAt: DateTime!
+  removedAt: DateTime
   createdBy: UUID!
   assetId: AssetType!
+  id: UUID!
+  deductionId: UUID
 }
 ```
 
 
 ### Fields
 
-#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>address</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
 > The wallet address.
 > 
 
@@ -46,19 +46,11 @@ type Wallet {
 > 
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>legacyAddress</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/api/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>tag</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
-> 
-
-#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> 
-> 
-
-#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>removedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>removedAt</b></code>](#)<Bullet />[`DateTime`](/api/scalars/date-time) <Badge class="secondary" text="scalar"/>
 > 
 > 
 
@@ -68,6 +60,14 @@ type Wallet {
 
 #### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>assetId</b></code>](#)<Bullet />[`AssetType!`](/api/enums/asset-type) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
 > The wallet's associated blockchain.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Wallet.<b>deductionId</b></code>](#)<Bullet />[`UUID`](/api/scalars/uuid) <Badge class="secondary" text="scalar"/>
+> 
 > 
 
 

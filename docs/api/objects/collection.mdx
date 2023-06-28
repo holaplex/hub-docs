@@ -56,6 +56,8 @@ type Collection {
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>address</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
 > The blockchain address of the collection used to view it in blockchain explorers.
+On Solana this is the mint address.
+On EVM chains it is the concatenation of the contract address and the token id `&#x007B;contractAddress&#x007D;:&#x007B;tokenId&#x007D;`.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Collection.<b>totalMints</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>

@@ -30,10 +30,11 @@ type Project {
 ): Drop
   name: String!
   organizationId: UUID!
-  createdAt: NaiveDateTime!
-  deactivatedAt: NaiveDateTime
-  profileImageUrl: String
+  createdAt: DateTime!
+  deactivatedAt: DateTime
+  profileImageUrlOriginal: String
   organization: Organization
+  profileImageUrl: String
   treasury: Treasury
 }
 ```
@@ -73,19 +74,23 @@ type Project {
 > The ID of the Holaplex organization to which the project belongs.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Project.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/api/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > The datetime, in UTC, when the project was created.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Project.<b>deactivatedAt</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>deactivatedAt</b></code>](#)<Bullet />[`DateTime`](/api/scalars/date-time) <Badge class="secondary" text="scalar"/>
 > The date and time in Coordinated Universal Time (UTC) when the Holaplex project was created. Once a project is deactivated, objects that were assigned to the project can no longer be interacted with.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Project.<b>profileImageUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>profileImageUrlOriginal</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
 > The optional profile image associated with the project, which can be used to visually represent the project.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>organization</b></code>](#)<Bullet />[`Organization`](/api/objects/organization) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>profileImageUrl</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
 > 
 > 
 

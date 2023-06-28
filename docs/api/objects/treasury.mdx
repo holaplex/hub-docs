@@ -21,7 +21,7 @@ A collection of wallets assigned to different entities in the Holaplex ecosystem
 type Treasury {
   id: UUID!
   vaultId: String!
-  createdAt: NaiveDateTime!
+  createdAt: DateTime!
   wallets: [Wallet!]
   wallet(
   assetType: AssetType!
@@ -42,8 +42,8 @@ type Treasury {
 [Vault Objects](https://docs.fireblocks.com/api/#vault-objects)
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>createdAt</b></code>](#)<Bullet />[`NaiveDateTime!`](/api/scalars/naive-date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> The creation datetime of the vault.
+#### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/api/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The creation DateTimeWithTimeZone of the vault.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Treasury.<b>wallets</b></code>](#)<Bullet />[`[Wallet!]`](/api/objects/wallet) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>

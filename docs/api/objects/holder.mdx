@@ -22,7 +22,7 @@ type Holder {
   collectionId: UUID!
   address: String!
   owns: Int!
-  mints: [String!]!
+  mints: [UUID!]!
 }
 ```
 
@@ -41,7 +41,7 @@ type Holder {
 > The number of NFTs that the holder owns in the collection.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Holder.<b>mints</b></code>](#)<Bullet />[`[String!]!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>Holder.<b>mints</b></code>](#)<Bullet />[`[UUID!]!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > The specific mints from the collection that the holder owns.
 > 
 
