@@ -65,7 +65,17 @@ Fork the repository https://github.com/holaplex/hub-starter-mint and give it a u
 
     g. Click "Create" to generate your `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
 
-2. `HOLAPLEX_AUTH_TOKEN`
+2. `TWITTER_CLIENT_ID` & `TWITTER_CLIENT_SECRET`
+
+    a. Go to the [Twitter Developer Portal](https://developer.twitter.com/en/portal).
+
+    b. Create a new standalone app or select an existing one.
+
+    c. Set up "User authentication" and select "Request email from users". The starter mint page uses email address for user identities.
+
+    c. Enter the "Consumer Keys" (API Key and Secret) to your Render configuration.
+
+3. `HOLAPLEX_AUTH_TOKEN`
 
     a. Log into the [Hub](https://hub.holaplex.com/)
 
@@ -73,21 +83,21 @@ Fork the repository https://github.com/holaplex/hub-starter-mint and give it a u
 
     c. On the "Credentials" tab, click "Generate token"
 
-3. `HOLAPLEX_PROJECT_ID` 
+4. `HOLAPLEX_PROJECT_ID` 
 
     a. On the [Hub](https://hub.holaplex.com/), create a new Project or select an existing one.
 
     b. The UUID in the URL is the Project ID, e.g. the Project ID corresponding to the Hub URL `https://hub.holaplex.com/projects/dc2471ec-6b34-4ca0-8c78-9906a59316fc/drops` is `dc2471ec-6b34-4ca0-8c78-9906a59316fc`
 
-4. `HOLAPLEX_DROP_ID`
+5. `HOLAPLEX_DROP_ID`
 
     a. On the [Hub](https://hub.holaplex.com/), create a new Drop or select an existing one.
 
     b. The UUID in the URL is the Drop ID, e.g. the Drop ID corresponding to the Hub URL `https://hub.holaplex.com/projects/dc2471ec-6b34-4ca0-8c78-9906a59316fc/drops/394ed9dd-b764-4e0f-a9b1-bb362fd56fb9/holders` is `394ed9dd-b764-4e0f-a9b1-bb362fd56fb9`
     
-5. `NEXTAUTH_URL` - Render will produce this URL, leave it blank for now.
+6. `NEXTAUTH_URL` - Render will produce this URL, leave it blank for now.
 
-6. Click *Apply* to create the database and web service
+7. Click *Apply* to create the database and web service
 
 ### Finish configuration
 
@@ -95,9 +105,9 @@ Fork the repository https://github.com/holaplex/hub-starter-mint and give it a u
 
 2. Set `NEXTAUTH_URL` - on the "Environment" tab, add an environment variable named `NEXTAUTH_URL` and paste the deploy URL as value. Save Changes.
 
-3. On the [Google Developer Console](https://console.developers.google.com/), navigate to Credentials -> Client ID for Web application. Add a URI to "Authorized JavaScript origins" and paste the same link.
+3. On the [Google Developer Console](https://console.developers.google.com/), navigate to Credentials -> Client ID for Web application. Add a URI to "Authorized JavaScript origins" and paste the same link. Also add a URI to "Authorized redirect URIs", paste the same link and append `/api/auth/callback/google`, e.g. `https://mint-page.onrender.com/api/auth/callback/google`
 
-4. Also add a URI to "Authorized redirect URIs", paste the same link and append `/api/auth/callback/google`, e.g. `https://mint-page.onrender.com/api/auth/callback/google`
+4. On the [Twitter Developer Portal](https://developer.twitter.com/en/portal) under "User uathentication settings", enter the callback URI, e.g. `https://mint-page.onrender.com/api/auth/callback/twitter`
 
 
 
