@@ -4,6 +4,29 @@ sidebar_position: 7
 
 # Release Notes
 
+## July 27, 2023
+
+Features:
+
+- Create collections (MCC on Solana) - `createCollection` mutation
+- Mint 1:1's to collections - `mintToCollection` mutation
+- Import collection (MCC on Solana) - `ImportSolanaCollection` mutation
+- Mint compressed NFTs (set `"compressed": true` in `mintToCollection` mutation)
+
+Fixes:
+
+- Mutations `retryDrop` and `retryMint` now reset the drop/mint status
+- Email verification
+
+## July 6, 2023
+
+Features:
+
+- Transfer tokens out of Hub-created wallets
+    - Hub verifies before charging that the NFT to be transferred was created by Hub
+    - When someone transfer a token, we charge credits immediately
+    - Hub will show a token as transferred once the on-chain transaction is complete
+
 ## June 27, 2023
 
 *Polygon support is here*
