@@ -8,10 +8,10 @@ sidebar_position: 7
 
 Features:
 
-- Create collections (MCC on Solana) - `createCollection` mutation
-- Mint 1:1's to collections - `mintToCollection` mutation
+- [Create collections](./developers/create-collection-api.md) (MCC on Solana) - `createCollection` mutation
+- [Mint 1:1's to collections](./developers/mint-to-collection-api.md) - `mintToCollection` mutation
 - Import collection (MCC on Solana) - `ImportSolanaCollection` mutation
-- Mint compressed NFTs (set `"compressed": true` in `mintToCollection` mutation)
+- [Mint compressed NFTs](./developers/mint-to-collection-api.md) (set `"compressed": true` in `mintToCollection` mutation)
 
 Fixes:
 
@@ -22,7 +22,7 @@ Fixes:
 
 Features:
 
-- Transfer tokens out of Hub-created wallets
+- [Transfer tokens out of Hub-created wallets](./Guides/transfer-out-of-hub-wallet.md)
     - Hub verifies before charging that the NFT to be transferred was created by Hub
     - When someone transfer a token, we charge credits immediately
     - Hub will show a token as transferred once the on-chain transaction is complete
