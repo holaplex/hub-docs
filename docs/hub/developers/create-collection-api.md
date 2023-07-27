@@ -5,7 +5,7 @@ sidebar_position: 6
 Creating a Collection via API
 ============
 
-Hub's API can be used to create a verified collection and then mint a token into that collection, on both Solana and Polygon.
+Hub's API can be used to create a verified collection (MCC) on Solana and then mint a token into that collection.
 
 ## Step 1: Authenticate
 
