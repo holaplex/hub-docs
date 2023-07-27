@@ -5,7 +5,7 @@ sidebar_position: 7
 Minting to a Collection via API
 ============
 
-Hub's API can be used to create a verified collection and then mint a token into that collection, on both Solana and Polygon.
+Hub's API can be used to create a verified collection on Solana and then mint a token into that collection, compressed or uncompressed.
 
 ## Step 1: Authenticate
 
