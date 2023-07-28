@@ -10,7 +10,7 @@ Hub's API can be used to create a verified collection and then mint a token into
 ## Step 1: Authenticate
 
 All API calls need a header of the form
-```
+```json
   { "Authorization": "Your_API_Token" }
 ```
 
@@ -25,7 +25,7 @@ To get an API token:
   ## Step 2: GraphQL mutation
 
   A sample `createCollection` mutation:
-  ```
+  ```graphql
   mutation CreateCollection($input: CreateCollectionInput!) {
     createCollection(input: $input) {
         collection {
@@ -36,7 +36,7 @@ To get an API token:
   }	
   ```
   Variables:
-  ```
+  ```json
   {
   "input": {
     "project":"<PROJECT_ID>",
@@ -64,7 +64,7 @@ To get an API token:
   ## Step 3: Check status of collection creation
   
   To view the status of a collection created by the steps above, use the new collection's `id` that is returned when creating the collection to query:
-  ```
+  ```graphql
   query GetCollectionStatus($project: UUID!, $collection:UUID!) {
     project(id: $project) {
         id
@@ -77,7 +77,7 @@ To get an API token:
   }
   ```
   Variables:
-  ```
+  ```json
   {
     "project": "<PROJECT_ID>",
     "collection": "<COLLECTION_ID>"
