@@ -55,7 +55,7 @@ Click on Next.
 
 Now, you'll have to enter details about your payment & royalties.
 
--   Supply indicates the total supply of the NFTs you wish to sell. For a Polygon drop, you must enter an integer. For a Solana drop, you can leave this field blank to create a drop with unlimited supply.
+-   Supply indicates the total supply of the NFTs you wish to sell. For a Polygon drop, you must enter an integer. For a Solana drop, you can leave this field blank to create a drop with unlimited supply. Note that the supply can not be updated after the drop is created.
 -   If you select the option "Use project treasury", all royalties will be sent to your project treasury wallet. Not selecting this allows you to enter an address that will be used to send the funds to. For a Polygon drop, enter a single destination wallet. For a Solana drop, enter up to 5 destination wallet addresses. The royalties must add up to 100.
 
 Click on Next.
