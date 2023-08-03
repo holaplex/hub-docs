@@ -15,7 +15,7 @@ Combining a year of experience working with Fortune 500 companies & big brands, 
 
 Thus, we've made sure that the NFT experience is smoother than ever before!
 
-<iframe src="https://player.vimeo.com/video/806571448?h=ca5327a661&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="358" src="https://www.loom.com/embed/80f40ffcbebd43a3bf470ee104d66b90?sid=775d784c-f40f-4d19-a9f8-4921787e7c00" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Why use Hub?
 
