@@ -59,4 +59,4 @@ mutation TransferAsset($input:TransferAssetInput!) {
 }
 ```
 
-
+Note that the API only supports transfering an NFT out of a Hub wallet. If a transfer is requested from an external wallet (even if the token was minted by Hub), Hub will return an error.

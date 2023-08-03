@@ -16,15 +16,15 @@ The number of credits required to perform different Hub operations is based on c
 
 Credits are currently required in order to:
 - Create a drop
+- Create a collection
 - Mint an NFT
+- Transfer an NFT
+- Create a customer wallet
 
-Soon, credits will also be required in order to:
-- Create a new customer wallet (wallets are automatically created upon customer creation)
-
-If an action fails or is canceled, the corresponding Hub credits will be refunded to your organization.
+If an action fails or is canceled, retry drop and retry mint can be performed with zero credit cost.
 
 ## Purchasing credits
 
-To purchase credits, click the **Buy more credit** button on your organization's [credits tab](https://hub.holaplex.com/credits/costs). You'll be taken to a Stripe checkout page where you can select the number of credits to purchase. Payments are currently accepted via credit card. Credits are immediately reflected in your organization's balance. 
+To purchase credits, click the **"Buy more credit"** button on your organization's [credits tab](https://hub.holaplex.com/credits/costs). You'll be taken to a Stripe checkout page where you can select the number of credits to purchase. Payments are currently accepted via credit card. Credits are immediately reflected in your organization's balance. 
 
 We also offer subscription pricing. For more information, please contact [support@holaplex.com](mailto:support@holaplex.com).
