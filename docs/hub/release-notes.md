@@ -4,6 +4,18 @@ sidebar_position: 7
 
 # Release Notes
 
+## August 3, 2023
+
+Features:
+
+- [Transfer cNFTs through HUB API](./Guides/transfer-out-of-hub-wallet.md)
+- Index cNFT transfer transaction in or outside of HUB
+- [Charge different credits for normal vs compressed NFTs on Solana](/hub/overview/credits.md)
+
+Fixes:
+
+- Fix managed transfer credit deductions. Credit now deducted for transfers.
+
 ## July 27, 2023
 
 Features:
