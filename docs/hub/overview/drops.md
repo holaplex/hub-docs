@@ -78,4 +78,8 @@ And you're done! You've just set up a drop!
 You should be able to see your drop on the Manage Drops screen now -
 ![Manage Drops Screen](./ListOfDrops.png)
 
-To learn how to mint your drop, check out the Guides, below.
+To learn how to mint your drop, check out the [Guides](../../category/guides), below.
+
+## Follow along
+
+<iframe width="640" height="400" src="https://www.loom.com/embed/c106cbd0f425431986c8819225eec3fd?sid=0fcd476c-85b8-483a-a2cd-679658a5c548" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

@@ -62,3 +62,7 @@ Once the collection is imported, it will be visible on Hub, under the "Collectio
 ## Step 2: Transfer update authority
 
 In order to mint tokens to the collection, transfer the collection's update authority to the Hub project treasury wallet. Transfer the update authority using the Metaboss `set-update-authority-all` command: https://metaboss.rs/set.html#set-update-authority.
+
+## Follow along
+
+<iframe width="640" height="400" src="https://www.loom.com/embed/f738235295024bbbb1fef09d65de1467?sid=535401a4-436b-4707-a2c8-9ad1571c62fa" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
