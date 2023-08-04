@@ -31,7 +31,7 @@ type Drop {
   shutdownAt: DateTime
   collection: Collection!
   status: DropStatus!
-  purchases: [Purchase!]
+  purchases: [MintHistory!]
 }
 ```
 
@@ -87,7 +87,7 @@ If it is null, the drop is currently not shutdown
 > The current status of the drop.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>Drop.<b>purchases</b></code>](#)<Bullet />[`[Purchase!]`](/api/objects/purchase) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+#### [<code style={{ fontWeight: 'normal' }}>Drop.<b>purchases</b></code>](#)<Bullet />[`[MintHistory!]`](/api/objects/mint-history) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
 > A list of all NFT purchases from this drop.
 > 
 
@@ -95,7 +95,7 @@ If it is null, the drop is currently not shutdown
 
 ### Member of
 
-[`CreateDropPayload`](/api/objects/create-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`PatchDropPayload`](/api/objects/patch-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`PauseDropPayload`](/api/objects/pause-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/><Bullet />[`ResumeDropPayload`](/api/objects/resume-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`ShutdownDropPayload`](/api/objects/shutdown-drop-payload)  <Badge class="secondary" text="object"/>
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`CreateDropPayload`](/api/objects/create-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`PatchDropPayload`](/api/objects/patch-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`PauseDropPayload`](/api/objects/pause-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/><Bullet />[`ResumeDropPayload`](/api/objects/resume-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`ShutdownDropPayload`](/api/objects/shutdown-drop-payload)  <Badge class="secondary" text="object"/>
 
 
 

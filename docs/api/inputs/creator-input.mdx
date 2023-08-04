@@ -1,0 +1,52 @@
+---
+id: creator-input
+title: CreatorInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+An attributed creator for a collection or mint.
+
+```graphql
+input CreatorInput {
+  address: String!
+  verified: Boolean
+  share: Int!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>CreatorInput.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The wallet address of the creator.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreatorInput.<b>verified</b></code>](#)<Bullet />[`Boolean`](/api/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> This field indicates whether the creator has been verified. This feature is only supported on the Solana blockchain.
+## References
+[Metaplex Token Metadata - Verify creator instruction](https://docs.metaplex.com/programs/token-metadata/instructions#verify-a-creator)
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CreatorInput.<b>share</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The share of royalties payout the creator should receive.
+> 
+
+
+
+### Member of
+
+[`CreateCollectionInput`](/api/inputs/create-collection-input)  <Badge class="secondary" text="input"/><Bullet />[`CreateDropInput`](/api/inputs/create-drop-input)  <Badge class="secondary" text="input"/><Bullet />[`MintToCollectionInput`](/api/inputs/mint-to-collection-input)  <Badge class="secondary" text="input"/><Bullet />[`PatchCollectionInput`](/api/inputs/patch-collection-input)  <Badge class="secondary" text="input"/><Bullet />[`PatchDropInput`](/api/inputs/patch-drop-input)  <Badge class="secondary" text="input"/>
+
+
+

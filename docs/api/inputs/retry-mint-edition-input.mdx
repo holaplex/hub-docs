@@ -1,0 +1,40 @@
+---
+id: retry-mint-edition-input
+title: RetryMintEditionInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Represents input data for `retry_mint` mutation with an ID as a field of type UUID
+
+```graphql
+input RetryMintEditionInput {
+  id: UUID!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>RetryMintEditionInput.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Member of
+
+[`retryMintEdition`](/api/mutations/retry-mint-edition)  <Badge class="secondary" text="mutation"/><Bullet />[`retryMintToCollection`](/api/mutations/retry-mint-to-collection)  <Badge class="secondary" text="mutation"/>
+
+
+

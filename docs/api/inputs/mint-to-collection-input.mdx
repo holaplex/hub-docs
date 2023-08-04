@@ -1,0 +1,67 @@
+---
+id: mint-to-collection-input
+title: MintToCollectionInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Represents input data for `mint_to_collection` mutation with a collection ID, recipient, metadata, and optional seller fee basis points as fields
+
+```graphql
+input MintToCollectionInput {
+  collection: UUID!
+  recipient: String!
+  metadataJson: MetadataJsonInput!
+  sellerFeeBasisPoints: Int
+  creators: [CreatorInput!]!
+  compressed: Boolean
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>MintToCollectionInput.<b>collection</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the collection to mint to
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintToCollectionInput.<b>recipient</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The recipient of the mint
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintToCollectionInput.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJsonInput!`](/api/inputs/metadata-json-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> The metadata of the mint
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintToCollectionInput.<b>sellerFeeBasisPoints</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> The optional seller fee basis points
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintToCollectionInput.<b>creators</b></code>](#)<Bullet />[`[CreatorInput!]!`](/api/inputs/creator-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> The creators to be assigned to the NFT.
+For Solana, this can be up to five creators. If the project treasury wallet is set as a creator and verified set to true the creator will be verified on chain.
+For Polygon, this can be only 1 creator.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintToCollectionInput.<b>compressed</b></code>](#)<Bullet />[`Boolean`](/api/scalars/boolean) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Member of
+
+[`mintToCollection`](/api/mutations/mint-to-collection)  <Badge class="secondary" text="mutation"/>
+
+
+

@@ -1,0 +1,43 @@
+---
+id: mint-to-collection
+title: mintToCollection
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+This mutation mints either a compressed or standard NFT to a collection.
+For Solana, the mint is verified and the collection size incremented.
+
+```graphql
+mintToCollection(
+  input: MintToCollectionInput!
+): MintToCollectionPayload!
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>mintToCollection.<b>input</b></code>](#)<Bullet />[`MintToCollectionInput!`](/api/inputs/mint-to-collection-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`MintToCollectionPayload`](/api/objects/mint-to-collection-payload) <Badge class="secondary" text="object"/>
+> Represents payload data for `mint_to_collection` mutation
+> 
+
+
+
+
+

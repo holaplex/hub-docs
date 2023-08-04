@@ -1,0 +1,43 @@
+---
+id: create-collection
+title: createCollection
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+This mutation creates a new NFT collection. The collection returns immediately with a creation status of CREATING. You can [set up a webhook](https://docs.holaplex.dev/hub/For%20Developers/webhooks-overview) to receive a notification when the collection is ready to be minted.
+For Solana, the collection is a sized Metaplex certified collection.
+
+```graphql
+createCollection(
+  input: CreateCollectionInput!
+): CreateCollectionPayload!
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>createCollection.<b>input</b></code>](#)<Bullet />[`CreateCollectionInput!`](/api/inputs/create-collection-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`CreateCollectionPayload`](/api/objects/create-collection-payload) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

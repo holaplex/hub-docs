@@ -1,0 +1,40 @@
+---
+id: import-collection-payload
+title: ImportCollectionPayload
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Represents the result of a successful import collection mutation.
+
+```graphql
+type ImportCollectionPayload {
+  status: CreationStatus!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>ImportCollectionPayload.<b>status</b></code>](#)<Bullet />[`CreationStatus!`](/api/enums/creation-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> The status of the collection import.
+> 
+
+
+
+### Returned by
+
+[`importSolanaCollection`](/api/mutations/import-solana-collection)  <Badge class="secondary" text="mutation"/>
+
+
+
