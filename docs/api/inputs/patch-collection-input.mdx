@@ -1,0 +1,50 @@
+---
+id: patch-collection-input
+title: PatchCollectionInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Input object for patching a collection by ID.
+
+```graphql
+input PatchCollectionInput {
+  id: UUID!
+  metadataJson: MetadataJsonInput
+  creators: [CreatorInput!]
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchCollectionInput.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The unique identifier of the drop
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchCollectionInput.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJsonInput`](/api/inputs/metadata-json-input) <Badge class="secondary" text="input"/>
+> The new metadata JSON for the drop
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>PatchCollectionInput.<b>creators</b></code>](#)<Bullet />[`[CreatorInput!]`](/api/inputs/creator-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> The creators of the drop
+> 
+
+
+
+### Member of
+
+[`patchCollection`](/api/mutations/patch-collection)  <Badge class="secondary" text="mutation"/>
+
+
+

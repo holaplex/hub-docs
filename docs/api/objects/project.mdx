@@ -28,6 +28,10 @@ type Project {
   drop(
   id: UUID!
 ): Drop
+  collections: [Collection!]
+  collection(
+  id: UUID!
+): Collection
   name: String!
   organizationId: UUID!
   createdAt: DateTime!
@@ -63,6 +67,16 @@ type Project {
 #### [<code style={{ fontWeight: 'normal' }}>Project.<b>drop</b></code>](#)<Bullet />[`Drop`](/api/objects/drop) <Badge class="secondary" text="object"/>
 > Look up a drop associated with the project by its ID.
 > ##### [<code style={{ fontWeight: 'normal' }}>Project.drop.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>collections</b></code>](#)<Bullet />[`[Collection!]`](/api/objects/collection) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> The collections associated with the project.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Project.<b>collection</b></code>](#)<Bullet />[`Collection`](/api/objects/collection) <Badge class="secondary" text="object"/>
+> 
+> ##### [<code style={{ fontWeight: 'normal' }}>Project.collection.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > 
 > 
 

@@ -1,0 +1,42 @@
+---
+id: patch-collection
+title: patchCollection
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Update a collection attributes or creators.
+
+```graphql
+patchCollection(
+  input: PatchCollectionInput!
+): PatchCollectionPayload!
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>patchCollection.<b>input</b></code>](#)<Bullet />[`PatchCollectionInput!`](/api/inputs/patch-collection-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`PatchCollectionPayload`](/api/objects/patch-collection-payload) <Badge class="secondary" text="object"/>
+> Represents the result of a successful patch collection mutation.
+> 
+
+
+
+
+

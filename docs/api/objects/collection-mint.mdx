@@ -30,6 +30,7 @@ type CollectionMint {
   edition: Int!
   sellerFeeBasisPoints: Int!
   creditsDeductionId: UUID
+  compressed: Boolean!
   collection: Collection
   metadataJson: MetadataJson
 }
@@ -84,6 +85,10 @@ On EVM chains it is the concatenation of the contract address and the token id `
 > credits deduction id
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>compressed</b></code>](#)<Bullet />[`Boolean!`](/api/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> Indicates if the NFT is compressed. Compression is only supported on Solana.
+> 
+
 #### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>collection</b></code>](#)<Bullet />[`Collection`](/api/objects/collection) <Badge class="secondary" text="object"/>
 > The collection the NFT was minted from.
 > 
@@ -97,7 +102,7 @@ On EVM chains it is the concatenation of the contract address and the token id `
 
 ### Member of
 
-[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`RetryMintPayload`](/api/objects/retry-mint-payload)  <Badge class="secondary" text="object"/><Bullet />[`TransferAssetPayload`](/api/objects/transfer-asset-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`MintToCollectionPayload`](/api/objects/mint-to-collection-payload)  <Badge class="secondary" text="object"/><Bullet />[`RetryMintEditionPayload`](/api/objects/retry-mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`TransferAssetPayload`](/api/objects/transfer-asset-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
 
 
 

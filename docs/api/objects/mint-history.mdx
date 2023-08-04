@@ -1,0 +1,70 @@
+---
+id: mint-history
+title: MintHistory
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+A record of a minted NFT.
+
+```graphql
+type MintHistory {
+  id: UUID!
+  mintId: UUID!
+  wallet: String!
+  txSignature: String
+  status: CreationStatus!
+  createdAt: DateTime!
+  collectionId: UUID!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>mintId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the NFT minted.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>wallet</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The wallet address of the buyer.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>txSignature</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> The signature of the transaction, if any.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>status</b></code>](#)<Bullet />[`CreationStatus!`](/api/enums/creation-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> The status of the creation of the NFT.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/api/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The date and time when the purchase was created.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>collectionId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the collection that facilitated the mint, if any.
+> 
+
+
+
+### Member of
+
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/api/objects/drop)  <Badge class="secondary" text="object"/>
+
+
+
