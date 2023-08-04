@@ -68,7 +68,7 @@ To test webhooks locally, you can use [ngrok](https://ngrok.com/) to expose 
 
 Create a `.env` file at the root of the project and add the following environment variables:
 
-```toml
+```bash
 NEXT_PUBLIC_FQDN=http://localhost:3000
 
 # Set up SSO with Google
