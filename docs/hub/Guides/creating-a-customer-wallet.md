@@ -101,7 +101,7 @@ Check out the list of supported asset types on the [enums documentation](../../a
 
 #### Example Curl Request
 
-```
+```bash
 curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"mutation CreateCustomerWallet($input: CreateCustomerWalletInput!) {\n  createCustomerWallet(input: $input) {\n    wallet {\n      address\n    }\n  }\n}","variables":{"input":{"customer":"CUSTOMER-ID","assetType":"SOL"}}}' --compressed
 ```
 
@@ -142,7 +142,7 @@ Note to find a customer's wallet address, perform the following query, e.g.:
 
 CURL:
 
-```sh
+```bash
 curl 'https://api.holaplex.com/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'Authorization: ACCESS-TOKEN' --data-binary '{"query":"{\n  project(id:\"PROJECT-ID\") {\n\t\tname\n    customer(id:\"CUSTOMER-ID\") {\n      wallet {\n        address\n      }\n    }\n  }\n}"}' --compressed
 ```
 
