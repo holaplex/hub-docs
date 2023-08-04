@@ -32,7 +32,7 @@ This command generates static content into the `build` directory and can be serv
 
 Retrieve the most recent version of the GraphQL schema and generate documentation pages for the "API Reference."
 
-```
+```bash
 $ yarn run graphql-to-doc
 ```
 
