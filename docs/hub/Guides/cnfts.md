@@ -4,15 +4,15 @@ sidebar_position: 9
 
 # Compressed NFTs on Solana
 
-Compressed NFTs (cNFTs) use State Compression and merkle trees to drastically reduce the storage cost for NFTs. Instead of storing an NFT's metadata in a typical Solana account, cNFTs store the metadata within the ledger (off-chain, but subject to consensus), rather than fully on-chain like conventional NFTs. 
+Compressed NFTs (cNFTs) use State Compression and merkle trees to reduce the storage cost for NFTs by nearly 1000x. Instead of storing an NFT's metadata in a typical Solana account, cNFTs store the metadata within the ledger (off-chain, but subject to consensus), rather than fully on-chain like conventional NFTs. 
 
-This allows cNFTs to still inherit the security and speed of the Solana blockchain, while at the same time reducing the overall storage costs.
+This allows cNFTs to inherit the security and speed of the Solana blockchain, while at the same time reduce overall storage costs.
 
 Solana RPC providers are utilized to store and manage data off-chain. Indexers are used to manage transaction data and facilitate data queries between RPCs and on-chain smart contracts for cNFTs. 
 
-Existing smart contracts on Solana need to be modified to interact with cNFTs, as this technology is still fairly new. However, with time and growing adoption, cNFTs should become fully supported by all programs in the ecosystem. 
+Existing smart contracts on Solana may need to be modified to interact with cNFTs, as this technology is still fairly new. However, with time and growing adoption, cNFTs will become fully supported by all programs in the ecosystem. 
 
-With HUB, you can mint and also transfer cNFTs, like any NFTs. And just like we support [transfer tracking](./transfer-out-of-hub-wallet.md) for all NFTs, cNFTs can be tracked as well so that you always know which wallets are holding your NFTs!
+With HUB, you can mint and also transfer cNFTs, just like any NFTs. And just like we support [transfer tracking](./transfer-out-of-hub-wallet.md) for all NFTs, cNFTs can be tracked as well so that you always know which wallets are holding your NFTs!
 
 ### How much cheaper are cNFTs?
 
@@ -65,7 +65,7 @@ On Hub, cNFTs can be minted from a *Collection*. Collection support is currently
 
 Note the `creator` field `verified` can only be set to `true` when the creator is the treasury wallet. Otherwise, the `creator` input must have `"verified": false`.
 
-For more info on creating a new collection on Hub, please see [Creating a Collection via API](../developers/create-collection-api.md). Be sure to set `"blockchain": "SOLANA"` - cNFTs are built on Solana.
+For more info on creating a new collection on Hub, please see [Creating a Collection via API](../developers/create-collection-api.md). Be sure to set `"blockchain": "SOLANA"` - cNFTs are only available on Solana.
 
 You can view your new collection on Hub Console, on your project's Collections tab. The Type is "Open" for any collections created using the `createCollection` mutation. 
 
