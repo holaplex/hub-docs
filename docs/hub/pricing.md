@@ -21,18 +21,6 @@ Hub is free for everyone to use and is the best way to begin building user-frien
 Credit Schedule, updated August 9 2023
 ---
 
-|Action | Solana (compressed) | Solana | Polygon |
-|-------------|-------------|-------------|-------------|
-| Mint | 2 | 576 | 246 |
-| Mint Edition	| 2 | 576 | 246 |
-| Create Collection | 302 | 302 | 302 |
-| Create Drop | 302 | 302 | n/a |
-| Create Wallet | 50 | 50 | 50 |
-| Retry Mint | 0 | 0 | 0 |
-| Retry Collection | 0 | 0 | n/a |
-| Retry Drop | 0 | 0 | 0|
-| Transfer Asset | 100 | 100 | 100 |
-
 1 credit = $0.0012
 
 - [x]  Volume Discounts are available
