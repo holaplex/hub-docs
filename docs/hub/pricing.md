@@ -26,10 +26,10 @@ Credit Schedule, updated August 9 2023
 | Mint | 2 | 576 | 246 |
 | Mint Edition	| 2 | 576 | 246 |
 | Create Collection | 302 | 302 | 302 |
-| Create Drop | 302 | 302 | 302 |
+| Create Drop | 302 | 302 | n/a |
 | Create Wallet | 50 | 50 | 50 |
 | Retry Mint | 0 | 0 | 0 |
-| Retry Collection | 0 | 0 | 0 |
+| Retry Collection | 0 | 0 | n/a |
 | Retry Drop | 0 | 0 | 0|
 | Transfer Asset | 100 | 100 | 100 |
 
