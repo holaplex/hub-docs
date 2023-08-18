@@ -4,6 +4,18 @@ sidebar_position: 7
 
 # Release Notes
 
+## August 17, 2023
+
+Features:
+
+- [Update mint through HUB API](./developers/update-mint.md)
+- Collection mint details page on HUB Console (from Collection page, click on a token to view details)
+
+Fixes:
+
+- Add downcasing of Polygon addresses
+- Allow blank values on credit schedule on HUB Console
+
 ## August 3, 2023
 
 Features:
