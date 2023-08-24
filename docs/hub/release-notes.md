@@ -10,11 +10,14 @@ Features:
 
 - [Update mint through HUB API](./developers/update-mint.md)
 - Collection mint details page on HUB Console (from Collection page, click on a token to view details)
+- Query collection mints by ID
 
 Fixes:
 
 - Add downcasing of Polygon addresses
 - Allow blank values on credit schedule on HUB Console
+- Fix total mints of collection when a collection is imported
+- Check organization balance before creating records to ensure no partial actions
 
 ## August 3, 2023
 
