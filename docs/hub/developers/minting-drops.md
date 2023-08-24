@@ -85,10 +85,8 @@ Example:
 mutation {
   mintEdition(
     input: {
-        {
-            drop: "drop-id",
-            recipient: "wallet-address"
-        }
+      drop: "drop-id",
+      recipient: "wallet-address"
     }
   ) {
     collectionMint {

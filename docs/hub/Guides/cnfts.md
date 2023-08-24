@@ -116,4 +116,6 @@ To mint a *compressed* NFT, simply set `"compressed": true`.
 
 ## Follow along
 
-Demo video coming soon!
+Watch the Holaplex team discuss and demonstrate minting cNFTs with Hub:
+
+<iframe src="https://www.loom.com/embed/b88ff06e42df4c49ad6d9c0bdcde930e?sid=8452430a-41b6-4bbc-be54-11d821a85f49" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
