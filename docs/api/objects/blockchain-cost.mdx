@@ -20,7 +20,7 @@ Represents the cost of performing an action on a specific blockchain
 ```graphql
 type BlockchainCost {
   blockchain: Blockchain!
-  credits: Int!
+  credits: Int
 }
 ```
 
@@ -31,8 +31,8 @@ type BlockchainCost {
 > enum that represents the blockchain on which the action is being performed.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>BlockchainCost.<b>credits</b></code>](#)<Bullet />[`Int!`](/api/scalars/int) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
-> represents the cost in credits for performing the action on the blockchain.
+#### [<code style={{ fontWeight: 'normal' }}>BlockchainCost.<b>credits</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> represents the cost in credits for performing the action on the blockchain. If nil then the action is not supported on the blockchain.
 > 
 
 

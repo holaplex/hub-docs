@@ -25,6 +25,7 @@ type Customer {
   updatedAt: NaiveDateTime
   addresses: [String!]
   mints: [CollectionMint!]
+  mintHistories: [MintHistory!]
   treasury: Treasury
   wallet(
   assetId: AssetType
@@ -58,6 +59,10 @@ This field returns null when there is no treasury assigned to the customer yet.
 
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>mints</b></code>](#)<Bullet />[`[CollectionMint!]`](/api/objects/collection-mint) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
 > The NFTs owned by any of the customers' wallets.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Customer.<b>mintHistories</b></code>](#)<Bullet />[`[MintHistory!]`](/api/objects/mint-history) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> The NFTs minted by the customer.
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Customer.<b>treasury</b></code>](#)<Bullet />[`Treasury`](/api/objects/treasury) <Badge class="secondary" text="object"/>
