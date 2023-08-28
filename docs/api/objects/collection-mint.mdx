@@ -33,6 +33,10 @@ type CollectionMint {
   compressed: Boolean!
   collection: Collection
   metadataJson: MetadataJson
+  updateHistories: [UpdateHistory!]
+  creators: [MintCreator!]
+  mintHistory: MintHistory
+  transferHistories: [NftTransfer!]
 }
 ```
 
@@ -98,11 +102,31 @@ On EVM chains it is the concatenation of the contract address and the token id `
 [Metaplex v1.1.0 Standard](https://docs.metaplex.com/programs/token-metadata/token-standard)
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>updateHistories</b></code>](#)<Bullet />[`[UpdateHistory!]`](/api/objects/update-history) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> The update history of the mint.
+> 
 
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>creators</b></code>](#)<Bullet />[`[MintCreator!]`](/api/objects/mint-creator) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> The creators of the mint. Includes the creator addresses and their shares.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>mintHistory</b></code>](#)<Bullet />[`MintHistory`](/api/objects/mint-history) <Badge class="secondary" text="object"/>
+> The record of the original mint.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>transferHistories</b></code>](#)<Bullet />[`[NftTransfer!]`](/api/objects/nft-transfer) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> The history of transfers for the mint.
+> 
+
+
+
+### Returned by
+
+[`mint`](/api/queries/mint)  <Badge class="secondary" text="query"/>
 
 ### Member of
 
-[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`MintToCollectionPayload`](/api/objects/mint-to-collection-payload)  <Badge class="secondary" text="object"/><Bullet />[`RetryMintEditionPayload`](/api/objects/retry-mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`TransferAssetPayload`](/api/objects/transfer-asset-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`MintHistory`](/api/objects/mint-history)  <Badge class="secondary" text="object"/><Bullet />[`MintToCollectionPayload`](/api/objects/mint-to-collection-payload)  <Badge class="secondary" text="object"/><Bullet />[`RetryMintEditionPayload`](/api/objects/retry-mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`TransferAssetPayload`](/api/objects/transfer-asset-payload)  <Badge class="secondary" text="object"/><Bullet />[`UpdateMintPayload`](/api/objects/update-mint-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
 
 
 

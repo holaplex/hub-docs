@@ -26,6 +26,7 @@ type MintHistory {
   status: CreationStatus!
   createdAt: DateTime!
   collectionId: UUID!
+  mint: CollectionMint
 }
 ```
 
@@ -60,11 +61,15 @@ type MintHistory {
 > The ID of the collection that facilitated the mint, if any.
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>MintHistory.<b>mint</b></code>](#)<Bullet />[`CollectionMint`](/api/objects/collection-mint) <Badge class="secondary" text="object"/>
+> The minted NFT.
+> 
+
 
 
 ### Member of
 
-[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/api/objects/drop)  <Badge class="secondary" text="object"/>
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`CollectionMint`](/api/objects/collection-mint)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/api/objects/drop)  <Badge class="secondary" text="object"/>
 
 
 

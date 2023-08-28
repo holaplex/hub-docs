@@ -1,0 +1,60 @@
+---
+id: data
+title: Data
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Data {
+  count: Int
+  organizationId: UUID
+  collectionId: UUID
+  projectId: UUID
+  timestamp: NaiveDateTime
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Data.<b>count</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> Count for the metric.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Data.<b>organizationId</b></code>](#)<Bullet />[`UUID`](/api/scalars/uuid) <Badge class="secondary" text="scalar"/>
+> The ID of the organization the data belongs to.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Data.<b>collectionId</b></code>](#)<Bullet />[`UUID`](/api/scalars/uuid) <Badge class="secondary" text="scalar"/>
+> The ID of the collection the data belongs to.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Data.<b>projectId</b></code>](#)<Bullet />[`UUID`](/api/scalars/uuid) <Badge class="secondary" text="scalar"/>
+> The ID of the project the data belongs to.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Data.<b>timestamp</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+> the timestamp associated with the data point.
+> 
+
+
+
+### Member of
+
+[`DataPoint`](/api/objects/data-point)  <Badge class="secondary" text="object"/>
+
+
+

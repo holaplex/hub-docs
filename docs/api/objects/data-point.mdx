@@ -1,0 +1,84 @@
+---
+id: data-point
+title: DataPoint
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+A `DataPoint` object containing analytics information.
+
+```graphql
+type DataPoint {
+  mints: [Data!]
+  customers: [Data!]
+  collections: [Data!]
+  wallets: [Data!]
+  projects: [Data!]
+  webhooks: [Data!]
+  credits: [Data!]
+  transfers: [Data!]
+  timestamp: NaiveDateTime
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>mints</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Analytics data for mints.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>customers</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Analytics data for customers.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>collections</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Analytics data for collections.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>wallets</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Analytics data for wallets.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>projects</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> Analytics data for projects.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>webhooks</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>credits</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>transfers</b></code>](#)<Bullet />[`[Data!]`](/api/objects/data) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>DataPoint.<b>timestamp</b></code>](#)<Bullet />[`NaiveDateTime`](/api/scalars/naive-date-time) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`analytics`](/api/queries/analytics)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Organization`](/api/objects/organization)  <Badge class="secondary" text="object"/><Bullet />[`Project`](/api/objects/project)  <Badge class="secondary" text="object"/>
+
+
+

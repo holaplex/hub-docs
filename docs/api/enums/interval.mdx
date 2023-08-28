@@ -1,0 +1,95 @@
+---
+id: interval
+title: Interval
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+enum Interval {
+  ALL
+  TODAY
+  YESTERDAY
+  THIS_WEEK
+  THIS_MONTH
+  THIS_YEAR
+  LAST_7_DAYS
+  LAST_30_DAYS
+  LAST_WEEK
+  LAST_MONTH
+  LAST_QUARTER
+  LAST_YEAR
+}
+```
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>ALL</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>TODAY</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>YESTERDAY</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>THIS_WEEK</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>THIS_MONTH</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>THIS_YEAR</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>LAST_7_DAYS</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>LAST_30_DAYS</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>LAST_WEEK</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>LAST_MONTH</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>LAST_QUARTER</b></code>](#) 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Interval.<b>LAST_YEAR</b></code>](#) 
+> 
+> 
+
+
+
+### Member of
+
+[`analytics`](/api/queries/analytics)  <Badge class="secondary" text="query"/>
+
+
+

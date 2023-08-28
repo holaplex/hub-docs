@@ -1,0 +1,65 @@
+---
+id: nft-transfer
+title: NftTransfer
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+A record of a transfer of an NFT.
+
+```graphql
+type NftTransfer {
+  id: UUID!
+  txSignature: String
+  collectionMintId: UUID!
+  sender: String!
+  recipient: String!
+  createdAt: DateTime!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>NftTransfer.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the NFT transfer.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>NftTransfer.<b>txSignature</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> The transaction signature of the transfer.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>NftTransfer.<b>collectionMintId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the NFT that was transferred.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>NftTransfer.<b>sender</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The wallet address of the sender.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>NftTransfer.<b>recipient</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The wallet address of the recipient.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>NftTransfer.<b>createdAt</b></code>](#)<Bullet />[`DateTime!`](/api/scalars/date-time) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The date and time when the transfer was created.
+> 
+
+
+
+### Member of
+
+[`CollectionMint`](/api/objects/collection-mint)  <Badge class="secondary" text="object"/>
+
+
+
