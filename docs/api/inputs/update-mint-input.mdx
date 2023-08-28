@@ -1,0 +1,57 @@
+---
+id: update-mint-input
+title: UpdateMintInput
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input UpdateMintInput {
+  id: UUID!
+  metadataJson: MetadataJsonInput!
+  sellerFeeBasisPoints: Int
+  creators: [CreatorInput!]!
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>UpdateMintInput.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> The ID of the mint to be updated
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UpdateMintInput.<b>metadataJson</b></code>](#)<Bullet />[`MetadataJsonInput!`](/api/inputs/metadata-json-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> The metadata of the mint
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UpdateMintInput.<b>sellerFeeBasisPoints</b></code>](#)<Bullet />[`Int`](/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> The optional seller fee basis points
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UpdateMintInput.<b>creators</b></code>](#)<Bullet />[`[CreatorInput!]!`](/api/inputs/creator-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+> The creators to be assigned to the NFT.
+For Solana, this can be up to five creators. If the project treasury wallet is set as a creator and verified set to true the creator will be verified on chain.
+For Polygon, this can be only 1 creator.
+> 
+
+
+
+### Member of
+
+[`updateMint`](/api/mutations/update-mint)  <Badge class="secondary" text="mutation"/>
+
+
+
