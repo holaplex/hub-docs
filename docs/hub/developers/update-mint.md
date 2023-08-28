@@ -19,7 +19,7 @@ The following properties of an NFT that satisfies the above criteria can be upda
 - Creator(s)
 
 ### Update an NFT
-Update support is available both through the HUB UI and the Hub Console as well. 
+Update support is available both through the HUB API and the Hub Console as well. 
 You can interact with our API at [https://api.holaplex.com/](https://api.holaplex.com/) using an access token from your Hub organization.
 
 ```graphql
