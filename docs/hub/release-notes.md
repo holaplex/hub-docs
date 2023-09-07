@@ -4,6 +4,13 @@ sidebar_position: 7
 
 # Release Notes
 
+## September 7, 2023
+
+Features:
+
+- Switch collection through HUB API - move a HUB-generated NFT from one HUB collection to another
+- Retry with exponential backoff on all Solana RPC calls - this prevents the user from needing to trigger a retry in the case of an RPC failure
+
 ## August 17, 2023
 
 Features:
