@@ -4,17 +4,13 @@ sidebar_position: 11
 
 # Open Drops
 
-An Open Drop offers a highly versatile method for distributing a collection of NFTs. It allows you to conveniently include images and metadata for a customizable number of NFTs, which can be minted through our API according to your specific requirements. For instance, an Open Drop is ideal for creating a generative collection, and you can leverage the Hub API to construct any distribution mechanism that suits your needs. Open Drops are currently only supported on Solana and only possible using Hub API.
+An Open Drop offers a highly versatile method for distributing a collection of NFTs. It allows you to conveniently include images and metadata for a customizable number of NFTs, which can be minted through our API according to your specific requirements. For instance, an Open Drop is ideal for creating a generative collection, and you can leverage the Hub API to construct any distribution mechanism that suits your needs. Open Drops are currently only supported on Solana. 
 
-## Create a collection?
-
-If you'd like your NFTs created via an Open Drop to belong to a collection (e.g. an MCC on Solana), create a collection in Hub first:
-
-
+Follow the steps below to create, queue, and mint an Open Drop using the Hub API.
 
 ## Create an Open Drop
 
-First, create an Open Drop using the `createDrop` mutation. The collection (MCC on Solana) will be created using the metadata JSON specified in drop creation.
+First, create an Open Drop using the `createDrop` mutation. The collection (MCC on Solana) will be created using the `metadataJson` and `creators` specified in drop creation.
 
 ### Example
 
@@ -36,16 +32,16 @@ Variables:
     "blockchain": "SOLANA",
     "creators": [
       {
-        "address": "<CREATOR-ADDRESS>",
+        "address": "<COLLECTION-CREATOR-ADDRESS>",
         "verified": true,
         "share": 100
       }
     ],
     "metadataJson": {
-      "name": "WHAT IS THIS",
-      "symbol": "TEST",
-      "description": "WHAT IS THIS",
-      "image": "https://nftstorage.link/ipfs/bafybeifvj5diegyxcyr62l2zvzfo6y2s3ijndyb4y633telkgvgawquucm",
+      "name": "COLLECTION NAME",
+      "symbol": "COLLECTION SYMBOL",
+      "description": "COLLECTION DESCRIPTION",
+      "image": "<LINK-TO-COLLECTION-IMAGE>",
       "attributes": []
     },
     "type": "OPEN"
@@ -55,7 +51,7 @@ Variables:
 
 Replace `<PROJECT-ID>` with the id of the project where the Open Drop should reside (on the ["Projects" tab](https://hub.holaplex.dev/projects) in Hub console, click the menu button next to the desired project to copy the project ID).
 
-Replace `<CREATOR-ADDRESS>` with ..... ??? TO DO!
+Replace `<COLLECTION-CREATOR-ADDRESS>` with the address of the creator wallet. The creator must have `"verified": false` if the wallet is not the Hub project treasury wallet. The address of the Hub project treasury wallet can be found on the "Treasury" tab on the Hub console.
 
 Note that Open Drops are currently only supported on Solana.
 
@@ -85,11 +81,9 @@ Upon successful request, you can view the new drop in Hub console, on your Proje
 
 ## Queue Mint to Drop
 
-NOT TRUE If you'd like to assign the queued NFT to a collection (MCC on Solana), create the collection before queuing a mint to the drop. After the collection is created, include the collection ID in the metadata JSON input for the queued drop.
+Use the `queueMintToDrop` mutation to "load up" your drop with tokens to be minted.
 
 A queued mint does not yet live on chain as an NFT. Its asset and metadata are uploaded to decentralized storage.
-
-TO DO: does it have to be in the associated collection? What if collection field is blank? What if collection field points to a different collection?
 
 ### Example
 
@@ -141,11 +135,11 @@ Sample response:
 
 The `collectionMint: id` in the response can be used to mint that queued token at a future time.
 
-To view your queued NFT on Hub Console, navigate to the Collection page that's associated with your Open Drop.
+To view your queued NFT on Hub console, navigate to the Collection page that's associated with your Open Drop.
 
 ## Mint a Queued NFT
 
-After queuing an NFT to an Open Drop, you can mint it into a wallet using the `mintQueued` mutation.
+After queuing an NFT to an Open Drop, you can mint it into a wallet using the `mintQueued` mutation. The NFT can be minted as either an NFT or cNFT and this choice is made at the time of mint.
 
 ### Example
 
@@ -176,3 +170,58 @@ Variables:
 The mint can be either compressed or uncompressed.
 
 ## Get All Queued Mints
+
+To query queued mints, use the `queuedMints` field under a `drop`:
+
+### Example
+
+```graphql
+query GetQueuedMints($drop: UUID!) {
+  drop(id: $drop) {
+    queuedMints {
+      id
+      creationStatus
+      createdAt
+      metadataJson {
+        name
+      }
+      creators {
+        address
+      }
+    }
+  }
+}	
+```
+Variables:
+```json
+{
+  "input": {
+    "drop": "<DROP-ID>",
+  }
+}
+```
+
+Sample response:
+```json
+{
+  "data": {
+    "drop": {
+      "queuedMints": [
+        {
+          "id": "<MINT-ID>",
+          "creationStatus": "QUEUED",
+          "createdAt": "2023-09-15T21:20:04.871010+00:00",
+          "metadataJson": {
+            "name": "Queued token name"
+          },
+          "creators": [
+            {
+              "address": "<CREATOR-WALLET-ADDRESS>"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
