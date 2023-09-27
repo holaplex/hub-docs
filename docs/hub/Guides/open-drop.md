@@ -83,7 +83,7 @@ Upon successful request, you can view the new drop in Hub console, on your Proje
 
 Use the `queueMintToDrop` mutation to "load up" your drop with tokens to be minted.
 
-A queued mint does not yet live on chain as an NFT. However, tts asset and metadata are uploaded to decentralized storage in preparation for the later mint.
+A queued mint does not yet live on chain as an NFT. However, its asset and metadata are uploaded to decentralized storage in preparation for the later mint.
 
 ### Example
 
@@ -139,9 +139,11 @@ To view your queued NFT on Hub console, navigate to the Collection page that's a
 
 ## Mint a Queued NFT
 
-After queuing an NFT to an Open Drop, you can mint it into a wallet using the `mintQueued` mutation. The NFT can be minted as either an NFT or cNFT and this choice is made at the time of mint.
+After queuing an NFT to an Open Drop, there are two ways to distribute that mint into a wallet. You can mint a specific queued NFT into a wallet using the `mintQueued` mutation or you can mint a randonly selected queued NFT from the drop using the `mintRandomQueuedToDrop` mutation.
 
-### Example
+The NFT can be minted as either an NFT or cNFT and this choice is made at the time of mint.
+
+### Example: `mintQueued`
 
 ```graphql
 mutation QueueMintToDrop($input: QueueMintToDropInput!) {
@@ -161,6 +163,32 @@ Variables:
 {
   "input": {
     "mint": "<MINT-ID>",
+    "recipient": "<DESTINATION-WALLET-ADDRESS>",
+    "compressed": true
+  }
+}
+```
+
+### Example: `mintRandomQueuedToDrop`
+
+```graphql
+mutation MintRandomQueuedToDrop($input: MintRandomQueuedInput!) {
+  mintRandomQueuedToDrop(input: $input) {
+    collectionMint {
+      id
+      address
+      owner
+      signature
+      creationStatus
+    }
+  }
+}
+```
+Variables:
+```json
+{
+  "input": {
+    "drop": "<DROP-ID>",
     "recipient": "<DESTINATION-WALLET-ADDRESS>",
     "compressed": true
   }
