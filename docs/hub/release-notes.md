@@ -15,7 +15,7 @@ Features:
 
 Features:
 
-- Open Drops
+- [Open Drops](./Guides/open-drop.md)
 - Minting metrics - for internally tracking mint speed
 
 ## September 7, 2023
