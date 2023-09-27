@@ -83,7 +83,7 @@ Upon successful request, you can view the new drop in Hub console, on your Proje
 
 Use the `queueMintToDrop` mutation to "load up" your drop with tokens to be minted.
 
-A queued mint does not yet live on chain as an NFT. Its asset and metadata are uploaded to decentralized storage.
+A queued mint does not yet live on chain as an NFT. However, tts asset and metadata are uploaded to decentralized storage in preparation for the later mint.
 
 ### Example
 
