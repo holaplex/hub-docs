@@ -1,0 +1,47 @@
+---
+id: wallet
+title: wallet
+hide_table_of_contents: true
+pagination_next: null
+pagination_prev: null
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
+
+
+Query to find a `Wallet` by its blockchain address.
+
+# Errors
+This function fails if the `AppContext` cannot be accessed,
+the address provided is not a valid blockchain address
+or fails to load from the database.
+
+```graphql
+wallet(
+  address: String!
+): Wallet
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>wallet.<b>address</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Type
+
+#### [`Wallet`](/api/objects/wallet) <Badge class="secondary" text="object"/>
+> A blockchain wallet is a digital wallet that allows users to securely store, manage, and transfer their cryptocurrencies or other digital assets on a blockchain network.
+> 
+
+
+
+
+

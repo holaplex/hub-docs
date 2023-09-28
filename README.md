@@ -30,11 +30,22 @@ This command generates static content into the `build` directory and can be serv
 
 ### Commands
 
-Retrieve the most recent version of the GraphQL schema and generate documentation pages for the "API Reference."
+Retrieve the most recent version of the GraphQL schema and generate documentation pages for the "API Reference.
+
+Add `.env` file to the root of the project and set the below environment variables. You can generate an auth token from the credentials tab of your HUB account.
+
+```
+HOLAPLEX_API_ENDPOINT=https://api.holaplex.com/graphql
+HOLAPLEX_AUTH_TOKEN=
+```
+
+Once your environment is set run the below script to re-generate the api documentation.
 
 ```bash
 $ yarn run graphql-to-doc
 ```
+
+Create a branch, commit the changes, open a pull request, and merge. Once the changes are merged into the `main` branch they will be automatically deployed via a github action workflow.
 
 ### Deployment
 

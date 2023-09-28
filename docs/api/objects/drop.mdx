@@ -20,6 +20,7 @@ No description
 ```graphql
 type Drop {
   id: UUID!
+  dropType: DropType!
   projectId: UUID!
   creationStatus: CreationStatus!
   startTime: DateTime
@@ -31,6 +32,7 @@ type Drop {
   shutdownAt: DateTime
   collection: Collection!
   status: DropStatus!
+  queuedMints: [CollectionMint!]
   purchases: [MintHistory!]
 }
 ```
@@ -40,6 +42,10 @@ type Drop {
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>id</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
 > The unique identifier for the drop.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Drop.<b>dropType</b></code>](#)<Bullet />[`DropType!`](/api/enums/drop-type) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
+> 
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>projectId</b></code>](#)<Bullet />[`UUID!`](/api/scalars/uuid) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
@@ -85,6 +91,10 @@ If it is null, the drop is currently not shutdown
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>status</b></code>](#)<Bullet />[`DropStatus!`](/api/enums/drop-status) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="enum"/>
 > The current status of the drop.
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Drop.<b>queuedMints</b></code>](#)<Bullet />[`[CollectionMint!]`](/api/objects/collection-mint) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
 > 
 
 #### [<code style={{ fontWeight: 'normal' }}>Drop.<b>purchases</b></code>](#)<Bullet />[`[MintHistory!]`](/api/objects/mint-history) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>

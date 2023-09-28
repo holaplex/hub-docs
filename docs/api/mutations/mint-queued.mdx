@@ -1,6 +1,6 @@
 ---
-id: retry-collection
-title: retryCollection
+id: mint-queued
+title: mintQueued
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,25 +15,25 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-This mutation tries to re-create a failed collection.
+This mutation mints a specific queued drop mint.
 
 ```graphql
-retryCollection(
-  input: RetryCollectionInput!
-): CreateCollectionPayload!
+mintQueued(
+  input: MintQueuedInput!
+): MintQueuedPayload!
 ```
 
 
 ### Arguments
 
-#### [<code style={{ fontWeight: 'normal' }}>retryCollection.<b>input</b></code>](#)<Bullet />[`RetryCollectionInput!`](/api/inputs/retry-collection-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
+#### [<code style={{ fontWeight: 'normal' }}>mintQueued.<b>input</b></code>](#)<Bullet />[`MintQueuedInput!`](/api/inputs/mint-queued-input) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="input"/>
 > 
 > 
 
 ### Type
 
-#### [`CreateCollectionPayload`](/api/objects/create-collection-payload) <Badge class="secondary" text="object"/>
-> Result of a successful create collection mutation.
+#### [`MintQueuedPayload`](/api/objects/mint-queued-payload) <Badge class="secondary" text="object"/>
+> Represents payload data for `mint_queued` mutation
 > 
 
 
