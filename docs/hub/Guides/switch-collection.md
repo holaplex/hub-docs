@@ -38,7 +38,7 @@ Variables:
 Replace `<MINT-ID>` with the id of the mint to be moved and `<COLLECTION-ADDRESS>` with the on-chain address of the destination collection.
 
 As with all Hub API calls, you'll need an access token that can be generated on your organization's Credentials tab: [https://hub.holaplex.com/credentials](https://hub.holaplex.com/credentials)
-For all API requests to Hub, you'll need to include an authentication header of the form. This token should be included in the call's header:
+This token should be included in the call's header:
 ```json
 {
   "Authorization": "<access-token>"

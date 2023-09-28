@@ -4,6 +4,20 @@ sidebar_position: 7
 
 # Release Notes
 
+## September 26, 2023
+
+Features:
+
+- Open Drop UI on Hub Console
+- [2FA](./Guides/2fa.md) for Hub Console login
+
+## September 20, 2023
+
+Features:
+
+- [Open Drops](./Guides/open-drop.md)
+- Minting metrics - for internally tracking mint speed
+
 ## September 7, 2023
 
 Features:
