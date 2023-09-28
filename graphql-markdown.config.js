@@ -13,6 +13,7 @@ module.exports = {
   routeBasePath: 'api',
   rootPath: './docs',
   baseURL: '/api',
+  homepage: 'docs/api/starting.md',
   loaders: {
     UrlLoader: '@graphql-tools/url-loader'
   },

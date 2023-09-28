@@ -22,7 +22,7 @@ type CollectionMint {
   id: UUID!
   collectionId: UUID!
   address: String
-  owner: String!
+  owner: String
   creationStatus: CreationStatus!
   createdBy: UUID!
   createdAt: DateTime!
@@ -30,13 +30,14 @@ type CollectionMint {
   edition: Int!
   sellerFeeBasisPoints: Int!
   creditsDeductionId: UUID
-  compressed: Boolean!
+  compressed: Boolean
   collection: Collection
   metadataJson: MetadataJson
   updateHistories: [UpdateHistory!]
   creators: [MintCreator!]
   mintHistory: MintHistory
   transferHistories: [NftTransfer!]
+  switchCollectionHistories: [SwitchCollectionHistory!]
 }
 ```
 
@@ -57,7 +58,7 @@ On Solana this is the mint address.
 On EVM chains it is the concatenation of the contract address and the token id `&#x007B;contractAddress&#x007D;:&#x007B;tokenId&#x007D;`.
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>owner</b></code>](#)<Bullet />[`String!`](/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>owner</b></code>](#)<Bullet />[`String`](/api/scalars/string) <Badge class="secondary" text="scalar"/>
 > The wallet address of the owner of the NFT.
 > 
 
@@ -89,7 +90,7 @@ On EVM chains it is the concatenation of the contract address and the token id `
 > credits deduction id
 > 
 
-#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>compressed</b></code>](#)<Bullet />[`Boolean!`](/api/scalars/boolean) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>compressed</b></code>](#)<Bullet />[`Boolean`](/api/scalars/boolean) <Badge class="secondary" text="scalar"/>
 > Indicates if the NFT is compressed. Compression is only supported on Solana.
 > 
 
@@ -118,6 +119,10 @@ On EVM chains it is the concatenation of the contract address and the token id `
 > The history of transfers for the mint.
 > 
 
+#### [<code style={{ fontWeight: 'normal' }}>CollectionMint.<b>switchCollectionHistories</b></code>](#)<Bullet />[`[SwitchCollectionHistory!]`](/api/objects/switch-collection-history) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> The history of switched collections for the mint.
+> 
+
 
 
 ### Returned by
@@ -126,7 +131,7 @@ On EVM chains it is the concatenation of the contract address and the token id `
 
 ### Member of
 
-[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`MintHistory`](/api/objects/mint-history)  <Badge class="secondary" text="object"/><Bullet />[`MintToCollectionPayload`](/api/objects/mint-to-collection-payload)  <Badge class="secondary" text="object"/><Bullet />[`RetryMintEditionPayload`](/api/objects/retry-mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`TransferAssetPayload`](/api/objects/transfer-asset-payload)  <Badge class="secondary" text="object"/><Bullet />[`UpdateMintPayload`](/api/objects/update-mint-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
+[`Collection`](/api/objects/collection)  <Badge class="secondary" text="object"/><Bullet />[`Customer`](/api/objects/customer)  <Badge class="secondary" text="object"/><Bullet />[`Drop`](/api/objects/drop)  <Badge class="secondary" text="object"/><Bullet />[`MintEditionPayload`](/api/objects/mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`MintHistory`](/api/objects/mint-history)  <Badge class="secondary" text="object"/><Bullet />[`MintQueuedPayload`](/api/objects/mint-queued-payload)  <Badge class="secondary" text="object"/><Bullet />[`MintToCollectionPayload`](/api/objects/mint-to-collection-payload)  <Badge class="secondary" text="object"/><Bullet />[`QueueMintToDropPayload`](/api/objects/queue-mint-to-drop-payload)  <Badge class="secondary" text="object"/><Bullet />[`RetryMintEditionPayload`](/api/objects/retry-mint-edition-payload)  <Badge class="secondary" text="object"/><Bullet />[`SwitchCollectionPayload`](/api/objects/switch-collection-payload)  <Badge class="secondary" text="object"/><Bullet />[`TransferAssetPayload`](/api/objects/transfer-asset-payload)  <Badge class="secondary" text="object"/><Bullet />[`UpdateMintPayload`](/api/objects/update-mint-payload)  <Badge class="secondary" text="object"/><Bullet />[`Wallet`](/api/objects/wallet)  <Badge class="secondary" text="object"/>
 
 
 

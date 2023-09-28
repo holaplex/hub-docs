@@ -1,6 +1,6 @@
 ---
-id: create-collection-payload
-title: CreateCollectionPayload
+id: mint-queued-payload
+title: MintQueuedPayload
 hide_table_of_contents: true
 pagination_next: null
 pagination_prev: null
@@ -15,18 +15,18 @@ export const SpecifiedBy = (props) => <>Specification<a className="link" style={
 export const Badge = (props) => <><span className={'badge badge--' + props.class}>{props.text}</span></>
 
 
-Result of a successful create collection mutation.
+Represents payload data for `mint_queued` mutation
 
 ```graphql
-type CreateCollectionPayload {
-  collection: Collection!
+type MintQueuedPayload {
+  collectionMint: CollectionMint!
 }
 ```
 
 
 ### Fields
 
-#### [<code style={{ fontWeight: 'normal' }}>CreateCollectionPayload.<b>collection</b></code>](#)<Bullet />[`Collection!`](/api/objects/collection) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
+#### [<code style={{ fontWeight: 'normal' }}>MintQueuedPayload.<b>collectionMint</b></code>](#)<Bullet />[`CollectionMint!`](/api/objects/collection-mint) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="object"/>
 > 
 > 
 
@@ -34,7 +34,7 @@ type CreateCollectionPayload {
 
 ### Returned by
 
-[`createCollection`](/api/mutations/create-collection)  <Badge class="secondary" text="mutation"/><Bullet />[`retryCollection`](/api/mutations/retry-collection)  <Badge class="secondary" text="mutation"/>
+[`mintQueued`](/api/mutations/mint-queued)  <Badge class="secondary" text="mutation"/><Bullet />[`mintRandomQueuedToDrop`](/api/mutations/mint-random-queued-to-drop)  <Badge class="secondary" text="mutation"/>
 
 
 
