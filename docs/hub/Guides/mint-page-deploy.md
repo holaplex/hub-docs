@@ -99,6 +99,8 @@ Fork the repository https://github.com/holaplex/hub-starter-mint and give it a u
 
 7. Click *Apply* to create the database and web service
 
+Note: An additional variable `NEXTAUTH_SECRET` will be automatically populated when the Render blueprint is created. If you are running a legacy version of a starter app in Render, you may need to add this manually (a random string).
+
 ### Finish configuration
 
 1. On the web service page, copy the deploy URL (e.g. https://mint-page.onrender.com)
@@ -120,3 +122,10 @@ Fork the repository https://github.com/holaplex/hub-starter-mint and give it a u
 ### View your mint page
 
 Your mint page is now deployed and ready to use! The URL is available in Render, e.g. https://mint-page.onrender.com
+
+### Troubleshooting
+
+If you have encountered any errors in creating wallets and customers while deploying your app, you may need to clear and recreate the database:
+```
+npm run reset
+```
